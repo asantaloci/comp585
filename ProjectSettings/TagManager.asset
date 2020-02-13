@@ -47,3 +47,6 @@ TagManager:
   - name: animals
     uniqueID: 342536065
     locked: 0
+  - name: textbox
+    uniqueID: 2607456223
+    locked: 0
