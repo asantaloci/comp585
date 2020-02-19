@@ -10,6 +10,6 @@ public class SceneSwitcher : MonoBehaviour
 
     public void GotoMenuScene()
     {
-        SceneManager.LoadScene("house");
+        SceneManager.LoadScene("adoption-interview");
     }
 }
