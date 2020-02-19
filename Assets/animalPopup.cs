@@ -16,6 +16,7 @@ public class animalPopup : MonoBehaviour
        if (popup != null) {
            popup.SetActive(true);
        }
+       
       
    }
 
