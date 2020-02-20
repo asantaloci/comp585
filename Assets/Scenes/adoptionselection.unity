@@ -1254,7 +1254,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1051164259
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fcf1daeb984ba42979a725847b9730ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2112,9 +2112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 868368344}
   animaltype: {fileID: 0}
-  animalselection: {fileID: 0}
+  animalselection: {fileID: 722702555}
   output: {fileID: 0}
-  popup: {fileID: 0}
+  popup: {fileID: 1528774131}
 --- !u!1 &1570577310
 GameObject:
   m_ObjectHideFlags: 0
