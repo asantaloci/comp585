@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public Text nameText; 
     public Text dialogueText;
     private Queue<string> sentences;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     void EndDialogue() {
-        Debug.Log("End of conversation");
+        // Debug.Log("End of conversation");
+        SceneManager.LoadScene("adoption-interview");
     }
 }

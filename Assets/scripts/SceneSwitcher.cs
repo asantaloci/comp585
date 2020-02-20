@@ -8,9 +8,9 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene("adoption-center");
     }
 
-    public void GotoMenuScene()
+    public void GotoRoomScene()
     {
-        SceneManager.LoadScene("house");
+        SceneManager.LoadScene("room");
     }
 
     public void GotoInterview()
