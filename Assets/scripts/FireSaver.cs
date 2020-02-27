@@ -16,7 +16,7 @@ public class FireSaver : MonoBehaviour
     }
 
     public static void SavePlayer(string playerName, string json) {
-        _database.GetReference(PLAYER_KEY).SetRawJsonValueAsync(json);
+        _database.GetReference(playerName).SetRawJsonValueAsync(json);
 
         //_database.ref("users").Child(playerName).SetRawJsonValueAsync(json);
         Debug.Log("save ran");

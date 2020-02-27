@@ -34,10 +34,38 @@ public class UserGenerator
     public string obstacle7;
     public string obstacle8;
 
-    public UserGenerator(string wish, string petName)
+    public UserGenerator(string wish, string petName, string[] actions, string[] obstacles)
     {
         this.wish = wish;
         this.petName = petName;
+
+        this.action1 = actions[0];
+        this.action2 = actions[1];
+        this.action3 = actions[2];
+        this.action4 = actions[3];
+        this.action5 = actions[4];
+        this.action6 = actions[5];
+        this.action7 = actions[6];
+        this.action8 = actions[7];
+        this.action9 = actions[8];
+        this.action10 = actions[9];
+        this.action11 = actions[10];
+        this.action12 = actions[11];
+        this.action13 = actions[12];
+        this.action14 = actions[13];
+        this.action15 = actions[14];
+        this.action16 = actions[15];
+
+        this.obstacle1 = obstacles[0];
+        this.obstacle2 = obstacles[1];
+        this.obstacle3 = obstacles[2];
+        this.obstacle4 = obstacles[3];
+        this.obstacle5 = obstacles[4];
+        this.obstacle6 = obstacles[5];
+        this.obstacle7 = obstacles[6];
+        this.obstacle8 = obstacles[7];
+
+
     }
 
     //public void addAction(string action)
