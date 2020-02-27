@@ -21,6 +21,16 @@ using UnityEngine.EventSystems;
             // animalType = "Cat";
             Debug.Log(animalName);
             Debug.Log(animalType);
+
+            // return "Cat";
+
+        } 
+        else if (animalType.ToString() =="blackCat") {
+            Debug.Log("This is a black cat");
+            // animalType = "Cat";
+            Debug.Log(animalName);
+            Debug.Log(animalType);
+            
             // return "Cat";
 
         } else {
