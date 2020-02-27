@@ -12,17 +12,19 @@ public class FireSaver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _database = FirebaseDatabase.DefaultInstance;   
+        _database = FirebaseDatabase.DefaultInstance;
     }
 
-    public static void SavePlayer(string playerName, string json) {
+    public static void SavePlayer(string playerName, string json)
+    {
         _database.GetReference(playerName).SetRawJsonValueAsync(json);
 
         //_database.ref("users").Child(playerName).SetRawJsonValueAsync(json);
         Debug.Log("save ran");
     }
 
-    public async Task<bool> SaveExists() {
+    public async Task<bool> SaveExists()
+    {
         var dataSnapshot = await _database.GetReference(PLAYER_KEY).GetValueAsync();
         return dataSnapshot.Exists;
     }
