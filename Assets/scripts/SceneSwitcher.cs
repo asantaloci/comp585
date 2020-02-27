@@ -5,7 +5,7 @@ public class SceneSwitcher : MonoBehaviour
 {
     public void GotoMainScene()
     {
-        SceneManager.LoadScene("adoption-center");
+        SceneManager.LoadScene("adoption-center-dialogue");
     }
 
     public void GotoRoomScene()
