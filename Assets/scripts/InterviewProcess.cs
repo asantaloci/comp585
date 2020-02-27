@@ -63,7 +63,7 @@ public class InterviewProcess : MonoBehaviour
         if (!playerInputField.text.Equals(""))
         {
             playerName = playerInputField.text;
-            test.text = playerName;
+            //test.text = playerName;
             playerInputField.text = string.Empty;
         }
 
@@ -75,7 +75,7 @@ public class InterviewProcess : MonoBehaviour
         if (!playerInputField.text.Equals(""))
         {
             wish = playerInputField.text;
-            test.text = wish;
+            //test.text = wish;
             playerInputField.text = string.Empty;
         }
     }
@@ -85,7 +85,7 @@ public class InterviewProcess : MonoBehaviour
         if (!playerInputField.text.Equals(""))
         {
             petName = playerInputField.text;
-            test.text = petName;
+            //test.text = petName;
             playerInputField.text = string.Empty;
         }
     }
@@ -99,7 +99,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action1 = playerInputField.text;
-                    test.text = action1;
+                    //test.text = action1;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -109,7 +109,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action2 = playerInputField.text;
-                    test.text = action2;
+                    //test.text = action2;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -119,7 +119,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action3 = playerInputField.text;
-                    test.text = action3;
+                    //test.text = action3;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -129,7 +129,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action4 = playerInputField.text;
-                    test.text = action4;
+                    //test.text = action4;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -139,7 +139,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action5 = playerInputField.text;
-                    test.text = action5;
+                    //test.text = action5;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -149,7 +149,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action6 = playerInputField.text;
-                    test.text = action6;
+                    //test.text = action6;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -159,7 +159,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action7 = playerInputField.text;
-                    test.text = action7;
+                    //test.text = action7;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -169,7 +169,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action8 = playerInputField.text;
-                    test.text = action8;
+                    //test.text = action8;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -179,7 +179,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action9 = playerInputField.text;
-                    test.text = action9;
+                    //test.text = action9;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -189,7 +189,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action10 = playerInputField.text;
-                    test.text = action10;
+                    //test.text = action10;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -199,7 +199,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action11 = playerInputField.text;
-                    test.text = action11;
+                    //test.text = action11;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -209,7 +209,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action12 = playerInputField.text;
-                    test.text = action12;
+                    //test.text = action12;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -219,7 +219,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action13 = playerInputField.text;
-                    test.text = action13;
+                    //test.text = action13;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -229,7 +229,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action14 = playerInputField.text;
-                    test.text = action14;
+                    //test.text = action14;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -239,7 +239,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action15 = playerInputField.text;
-                    test.text = action15;
+                    //test.text = action15;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -249,7 +249,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     action16 = playerInputField.text;
-                    test.text = action16;
+                    //test.text = action16;
                     playerInputField.text = string.Empty;
                     actionstep += 1;
                 }
@@ -267,7 +267,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     obstacle1 = playerInputField.text;
-                    test.text = obstacle1;
+                    //test.text = obstacle1;
                     playerInputField.text = string.Empty;
                     obstaclestep++;
                 }
@@ -277,7 +277,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     obstacle2 = playerInputField.text;
-                    test.text = obstacle2;
+                    //test.text = obstacle2;
                     playerInputField.text = string.Empty;
                     obstaclestep++;
                 }
@@ -287,7 +287,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     obstacle3 = playerInputField.text;
-                    test.text = obstacle3;
+                    //test.text = obstacle3;
                     playerInputField.text = string.Empty;
                     obstaclestep++;
                 }
@@ -297,7 +297,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     obstacle4 = playerInputField.text;
-                    test.text = obstacle4;
+                    //test.text = obstacle4;
                     playerInputField.text = string.Empty;
                     obstaclestep++;
                 }
@@ -307,7 +307,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     obstacle5 = playerInputField.text;
-                    test.text = obstacle5;
+                    //test.text = obstacle5;
                     playerInputField.text = string.Empty;
                     obstaclestep++;
                 }
@@ -317,7 +317,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     obstacle6 = playerInputField.text;
-                    test.text = obstacle6;
+                    //test.text = obstacle6;
                     playerInputField.text = string.Empty;
                     obstaclestep++;
                 }
@@ -327,7 +327,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     obstacle7 = playerInputField.text;
-                    test.text = obstacle7;
+                    //test.text = obstacle7;
                     playerInputField.text = string.Empty;
                     obstaclestep++;
                 }
@@ -337,7 +337,7 @@ public class InterviewProcess : MonoBehaviour
                 if (!playerInputField.text.Equals(""))
                 {
                     obstacle8 = playerInputField.text;
-                    test.text = obstacle8;
+                    //test.text = obstacle8;
                     playerInputField.text = string.Empty;
                     obstaclestep++;
                 }
