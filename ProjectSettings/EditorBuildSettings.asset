@@ -14,4 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/adoption-interview.unity
     guid: 187253b6a697a33438bac573895ad9b7
+  - enabled: 1
+    path: Assets/Scenes/setting.unity
+    guid: aeec054d0c9ab504e82dbca644c236c4
+  - enabled: 1
+    path: Assets/Scenes/store.unity
+    guid: 0db1753251c8b474b9828e80750443df
+  - enabled: 1
+    path: Assets/Scenes/logIn.unity
+    guid: 92c76aa1f77efb84faf4fcdc2010fb37
+  - enabled: 1
+    path: Assets/Scenes/adoptionselection.unity
+    guid: 78b5dfcfcfb1e450ea18dfe1489de51a
   m_configObjects: {}
