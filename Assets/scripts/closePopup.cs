@@ -10,8 +10,8 @@ public class closePopup : MonoBehaviour
     public TextMesh animalselection;
     public TextMesh output;
     public GameObject popup;
+    public GameObject animal;
     // Start is called before the first frame update
-  
 
 
      public void close()
@@ -29,12 +29,14 @@ public class closePopup : MonoBehaviour
         popup.SetActive(false);
         animalselection.text = "You chose"+animaltype+"";
         print("You chose"+animaltype+"");
+        print(animalselection.text);
 
         // Text txt = transform.Find("Text").GetComponent<Text>();
         // if (selectedtext.enabled) {
         //     print("pressed");
         //     popup.SetActive(false);
         // }
+        
     }
 
 }
