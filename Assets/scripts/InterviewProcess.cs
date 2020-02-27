@@ -12,6 +12,8 @@ public class InterviewProcess : MonoBehaviour
 
     private string playerName;
 
+    private string petType;
+
     private string wish;
 
     private string petName;
@@ -344,7 +346,7 @@ public class InterviewProcess : MonoBehaviour
         }
 
 
-        var user = new UserGenerator(wish, petName, actions, obstacles);
+        var user = new UserGenerator(petType, wish, petName, actions, obstacles);
         string json = JsonUtility.ToJson(user);
         FireSaver.SavePlayer(playerName, json);
 

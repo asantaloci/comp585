@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UserGenerator
 {
+
+    public string petType;
     public string wish;
 
     public string petName;
@@ -34,8 +36,9 @@ public class UserGenerator
     public string obstacle7;
     public string obstacle8;
 
-    public UserGenerator(string wish, string petName, string[] actions, string[] obstacles)
+    public UserGenerator(string petType, string wish, string petName, string[] actions, string[] obstacles)
     {
+        this.petType = petType;
         this.wish = wish;
         this.petName = petName;
 
