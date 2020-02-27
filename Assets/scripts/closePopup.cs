@@ -12,6 +12,7 @@ public class closePopup : MonoBehaviour
     public TextMesh animalselection;
     
     public Text output;
+     public static string selectedAnimalType;
     public GameObject popup;
     public GameObject animal;
 
@@ -42,6 +43,7 @@ public class closePopup : MonoBehaviour
         if (selected.animalType == "Cat") { // if the animal that was selected's type is cat
              chosenpet.animalType = "Cat";   //set the chosen pet object to that 
              chosenpet.health = 20;
+             selectedAnimalType = "Cat";
              chosenpet.animalName = "Poopy";
             output.text = "You chose: " + chosenpet.animalType;
              Debug.Log("animaltype of chosen = " + chosenpet.animalType);
@@ -53,6 +55,7 @@ public class closePopup : MonoBehaviour
              chosenpet.animaltype = selected.animaltype;   //set the chosen pet object to that 
              Debug.Log(chosenpet.animaltype);
              chosenpet.health = selected.health;
+             selectedAnimalType = "blackCat";
              chosenpet.animalName = selected.animalName;
              output.text = "You chose: " + chosenpet.animalType;
 

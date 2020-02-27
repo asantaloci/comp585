@@ -32,4 +32,17 @@ cat.SetActive(true);
      
      
      }
+//      void Start() {
+//               if (selectedAnimalType == "Cat") {
+// Debug.Log("animal type is cat");
+// blackcat.SetActive(false);
+// cat.SetActive(true);
+
+
+//      } else {
+//          Debug.Log("black cat");
+//          cat.SetActive(false);
+//          blackcat.SetActive(true);
+//      }
+//      }
     }
