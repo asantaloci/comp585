@@ -348,7 +348,11 @@ public class InterviewProcess : MonoBehaviour
 
     public void completeAdoption()
     {
-        //This is where we will place the code that sends all of the above gathered data to Firebase
+        var user = new UserGenerator(wish, petName);
+        string json = JsonUtility.ToJson(user);
+        FireSaver.SavePlayer(playerName, json);
+
+
     }
 
 }
