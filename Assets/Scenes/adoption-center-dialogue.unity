@@ -308,32 +308,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &195654028 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7670449802650654950, guid: 8392824daf5244bb688cd49500208a78,
-    type: 3}
-  m_PrefabInstance: {fileID: 7670449803895925543}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &195654029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195654028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c67b60b15cd744bf8b342f082ed2dfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedtext: {fileID: 0}
-  animaltype: 
-  animalselection: {fileID: 0}
-  output: {fileID: 1479103823}
-  popup: {fileID: 0}
-  animal: {fileID: 0}
-  chosenpet: {fileID: 0}
-  selected: {fileID: 0}
 --- !u!1 &242983260
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,13 +416,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 242983264}
-  animaltype: 
+  animaltype: {fileID: 0}
   animalselection: {fileID: 0}
   output: {fileID: 0}
   popup: {fileID: 2083587718}
-  animal: {fileID: 0}
-  chosenpet: {fileID: 0}
-  selected: {fileID: 0}
 --- !u!102 &242983264
 TextMesh:
   serializedVersion: 3
@@ -735,13 +706,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 285453428}
-  animaltype: 
+  animaltype: {fileID: 0}
   animalselection: {fileID: 0}
   output: {fileID: 0}
   popup: {fileID: 1528774131}
-  animal: {fileID: 0}
-  chosenpet: {fileID: 0}
-  selected: {fileID: 0}
 --- !u!102 &285453428
 TextMesh:
   serializedVersion: 3
@@ -1241,7 +1209,7 @@ RectTransform:
   m_LocalScale: {x: 0.32625, y: 0.32625, z: 0.32625}
   m_Children: []
   m_Father: {fileID: 981590348}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1261,13 +1229,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 0}
-  animaltype: 
+  animaltype: {fileID: 1322146170}
   animalselection: {fileID: 722702555}
   output: {fileID: 0}
   popup: {fileID: 0}
-  animal: {fileID: 0}
-  chosenpet: {fileID: 0}
-  selected: {fileID: 0}
 --- !u!102 &722702555
 TextMesh:
   serializedVersion: 3
@@ -1606,7 +1571,6 @@ GameObject:
   - component: {fileID: 868368344}
   - component: {fileID: 868368346}
   - component: {fileID: 868368341}
-  - component: {fileID: 868368347}
   m_Layer: 5
   m_Name: Select
   m_TagString: Untagged
@@ -1678,17 +1642,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 868368346}
         m_MethodName: selectanimal
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 868368347}
-        m_MethodName: getType
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1889,29 +1842,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 868368344}
-  animaltype: 
-  animalselection: {fileID: 722702555}
-  output: {fileID: 1479103823}
-  popup: {fileID: 1528774131}
-  animal: {fileID: 0}
-  chosenpet: {fileID: 1591440323}
-  selected: {fileID: 996236379}
---- !u!114 &868368347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 868368339}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00f5f3a04b77e40ac8877099ff25a3d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   animaltype: {fileID: 1322146170}
-  animalName: Poopy
-  animalType: Cat
-  health: 0
+  animalselection: {fileID: 722702555}
+  output: {fileID: 0}
+  popup: {fileID: 1528774131}
 --- !u!1 &981590344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,7 +1937,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1188557683}
-  - {fileID: 1591440322}
   - {fileID: 996236374}
   - {fileID: 722702552}
   - {fileID: 2114024224}
@@ -2031,7 +1964,6 @@ GameObject:
   - component: {fileID: 996236378}
   - component: {fileID: 996236377}
   - component: {fileID: 996236376}
-  - component: {fileID: 996236379}
   - component: {fileID: 996236375}
   m_Layer: 5
   m_Name: CatButton
@@ -2053,7 +1985,7 @@ RectTransform:
   m_Children:
   - {fileID: 1528774132}
   m_Father: {fileID: 981590348}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2127,17 +2059,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 996236379}
-        m_MethodName: getType
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &996236377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2174,22 +2095,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996236373}
   m_CullTransparentMesh: 0
---- !u!114 &996236379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996236373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00f5f3a04b77e40ac8877099ff25a3d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animaltype: {fileID: 1322146170}
-  animalName: Poopy
-  animalType: Cat
-  health: 0
 --- !u!1 &1046833215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,7 +2111,7 @@ GameObject:
   - component: {fileID: 1046833218}
   - component: {fileID: 1046833217}
   m_Layer: 5
-  m_Name: blackCat
+  m_Name: Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2301,13 +2206,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 1046833216}
-  animaltype: 
+  animaltype: {fileID: 0}
   animalselection: {fileID: 0}
   output: {fileID: 0}
   popup: {fileID: 2083587718}
-  animal: {fileID: 0}
-  chosenpet: {fileID: 0}
-  selected: {fileID: 0}
 --- !u!23 &1046833219
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2667,13 +2569,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 1322146170}
-  animaltype: 
+  animaltype: {fileID: 0}
   animalselection: {fileID: 0}
   output: {fileID: 0}
   popup: {fileID: 1528774131}
-  animal: {fileID: 0}
-  chosenpet: {fileID: 0}
-  selected: {fileID: 0}
 --- !u!23 &1322146173
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2932,83 +2831,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1479103822
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1479103825}
-  - component: {fileID: 1479103824}
-  - component: {fileID: 1479103823}
-  m_Layer: 0
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1479103823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479103822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
-    m_FontStyle: 2
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
---- !u!222 &1479103824
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479103822}
-  m_CullTransparentMesh: 0
---- !u!224 &1479103825
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479103822}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1591440322}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -67.97, y: 134.96}
-  m_SizeDelta: {x: 275.79, y: 46.42}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1523796388
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,7 +3054,6 @@ GameObject:
   - component: {fileID: 1528774134}
   - component: {fileID: 1528774133}
   - component: {fileID: 1528774135}
-  - component: {fileID: 1528774136}
   m_Layer: 5
   m_Name: Popup
   m_TagString: Untagged
@@ -3312,29 +3133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 868368344}
-  animaltype: 
-  animalselection: {fileID: 1589124513}
+  animaltype: {fileID: 0}
+  animalselection: {fileID: 722702555}
   output: {fileID: 0}
   popup: {fileID: 1528774131}
-  animal: {fileID: 996236373}
-  chosenpet: {fileID: 0}
-  selected: {fileID: 0}
---- !u!114 &1528774136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528774131}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00f5f3a04b77e40ac8877099ff25a3d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animaltype: {fileID: 1322146170}
-  animalName: Poopy
-  animalType: Cat
-  health: 20
 --- !u!1 &1567027426
 GameObject:
   m_ObjectHideFlags: 0
@@ -3368,7 +3170,7 @@ RectTransform:
   m_Children:
   - {fileID: 573898955}
   m_Father: {fileID: 981590348}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -3575,7 +3377,6 @@ GameObject:
   - component: {fileID: 1587927475}
   - component: {fileID: 1587927474}
   - component: {fileID: 1587927473}
-  - component: {fileID: 1587927477}
   m_Layer: 5
   m_Name: BlackCatButton
   m_TagString: Untagged
@@ -3596,7 +3397,7 @@ RectTransform:
   m_Children:
   - {fileID: 2083587719}
   m_Father: {fileID: 981590348}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3670,17 +3471,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1587927477}
-        m_MethodName: getType
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1587927475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3717,46 +3507,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587927471}
   m_CullTransparentMesh: 0
---- !u!114 &1587927477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587927471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00f5f3a04b77e40ac8877099ff25a3d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animaltype: {fileID: 1046833216}
-  animalName: Poopy2
-  animalType: blackCat
-  health: 20
---- !u!102 &1589124513 stripped
-TextMesh:
-  m_CorrespondingSourceObject: {fileID: 7670449802644452998, guid: 8392824daf5244bb688cd49500208a78,
-    type: 3}
-  m_PrefabInstance: {fileID: 7670449803895925543}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1591440322 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7670449802650654949, guid: 8392824daf5244bb688cd49500208a78,
-    type: 3}
-  m_PrefabInstance: {fileID: 7670449803895925543}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1591440323 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7670449802650654948, guid: 8392824daf5244bb688cd49500208a78,
-    type: 3}
-  m_PrefabInstance: {fileID: 7670449803895925543}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195654028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00f5f3a04b77e40ac8877099ff25a3d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1736637133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,13 +3615,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 1736637137}
-  animaltype: 
+  animaltype: {fileID: 1046833216}
   animalselection: {fileID: 722702555}
-  output: {fileID: 1479103823}
+  output: {fileID: 0}
   popup: {fileID: 2083587718}
-  animal: {fileID: 0}
-  chosenpet: {fileID: 1591440323}
-  selected: {fileID: 1587927477}
 --- !u!102 &1736637137
 TextMesh:
   serializedVersion: 3
@@ -4083,11 +3830,11 @@ RectTransform:
   - {fileID: 2018398095}
   - {fileID: 863245624}
   m_Father: {fileID: 981590348}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.025024414, y: 157.96997}
+  m_AnchoredPosition: {x: 0.024993896, y: 157.96997}
   m_SizeDelta: {x: -0.049988, y: 315.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1862396945
@@ -4217,7 +3964,6 @@ GameObject:
   - component: {fileID: 1973259166}
   - component: {fileID: 1973259165}
   - component: {fileID: 1973259164}
-  - component: {fileID: 1973259167}
   - component: {fileID: 1973259163}
   m_Layer: 5
   m_Name: toRoom
@@ -4239,7 +3985,7 @@ RectTransform:
   m_Children:
   - {fileID: 1874665494}
   m_Father: {fileID: 981590348}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -4312,17 +4058,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1973259167}
-        m_MethodName: selectToRoom
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1973259165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4359,21 +4094,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973259161}
   m_CullTransparentMesh: 0
---- !u!114 &1973259167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973259161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0632477402a1742b29821b5df62114ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chosenpet: {fileID: 1591440323}
-  blackcat: {fileID: 1587927471}
-  cat: {fileID: 996236373}
 --- !u!1 &2018398094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4522,13 +4242,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 1736637137}
-  animaltype: 
+  animaltype: {fileID: 0}
   animalselection: {fileID: 722702555}
   output: {fileID: 0}
   popup: {fileID: 2083587718}
-  animal: {fileID: 0}
-  chosenpet: {fileID: 0}
-  selected: {fileID: 0}
 --- !u!114 &2083587721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4643,134 +4360,5 @@ Transform:
   m_LocalScale: {x: 0.69853663, y: 0.69023997, z: 0.69023997}
   m_Children: []
   m_Father: {fileID: 981590348}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &7670449803895925543
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 981590348}
-    m_Modifications:
-    - target: {fileID: 7670449802644452992, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -38
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802644452992, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 137.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802644452992, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 325.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802644452992, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 123.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802644452994, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802644452994, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802644452994, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802644452994, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802644452994, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802644452994, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802644452996, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: animalselection
-      value: 
-      objectReference: {fileID: 722702555}
-    - target: {fileID: 7670449802644452996, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: popup
-      value: 
-      objectReference: {fileID: 1528774131}
-    - target: {fileID: 7670449802650654949, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 107.604256
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802650654949, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -127.88844
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802650654949, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1049.1216
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802650654949, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802650654949, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802650654949, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802650654949, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802650654949, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802650654949, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802650654949, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802650654949, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670449802650654950, guid: 8392824daf5244bb688cd49500208a78,
-        type: 3}
-      propertyPath: m_Name
-      value: chosenpet
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8392824daf5244bb688cd49500208a78, type: 3}

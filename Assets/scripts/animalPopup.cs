@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class animalPopup : MonoBehaviour
 {
-  
 
     public GameObject popup;
     // Start is called before the first frame update
@@ -20,10 +19,6 @@ public class animalPopup : MonoBehaviour
        
       
    }
-
-
-//pray to god
-  
 
    
 }
