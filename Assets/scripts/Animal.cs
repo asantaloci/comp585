@@ -8,7 +8,9 @@ using UnityEngine.EventSystems;
     public class Animal : MonoBehaviour
     {
         
+        
         public TextMesh animaltype;
+        
         public string animalName;
         public string animalType; //to assign correct image
 
@@ -38,7 +40,9 @@ using UnityEngine.EventSystems;
             // return "Not";
         }
     }
-     
+
+    
+    
 
      void Update() {
         //  getType();
