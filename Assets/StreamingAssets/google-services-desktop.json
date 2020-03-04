@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "340483497482",
+    "firebase_url": "https://habitpet-76447.firebaseio.com",
+    "project_id": "habitpet-76447",
+    "storage_bucket": "habitpet-76447.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340483497482:android:5b86cd67280edb0dd249f3",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.HABITRPG"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "340483497482-3f6cbmd5lp31m7188uo8rlvmg66a4p52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJAKE4lXm_neXT-rVtkU1OL6vI477JsXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "340483497482-3f6cbmd5lp31m7188uo8rlvmg66a4p52.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "340483497482-jvp78e4k1kk9dmo21nbe9ekr1c91ebf4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.DefaultCompany.HABIT-RPG"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
