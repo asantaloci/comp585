@@ -3,7 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
-    public void GotoMainScene()
+      public void GotoLogin()
+    {
+        SceneManager.LoadScene("logIn");
+    }
+    public void GotoAdoptionCenter()
     {
         SceneManager.LoadScene("adoption-center-dialogue");
     }
@@ -16,5 +20,9 @@ public class SceneSwitcher : MonoBehaviour
     public void GotoInterview()
     {
         SceneManager.LoadScene("adoption-interview");
+    }
+      public void GotoBlank()
+    {
+        SceneManager.LoadScene("setting");
     }
 }
