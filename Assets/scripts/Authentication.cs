@@ -78,6 +78,11 @@ public class Authentication : MonoBehaviour
                 newUser.DisplayName, newUser.UserId);
 
             SceneManager.LoadScene("adoption-interview");
+
+           /* GameObject global = GameObject.Find("Global");
+            GlobalVars globalVars = global.GetComponent<GlobalVars>();
+            globalVars.playerEmail = this.username.text;
+            Debug.Log(globalVars.playerEmail);*/
         });
         //Debug.Log("ran and maybe finished registration");
         
