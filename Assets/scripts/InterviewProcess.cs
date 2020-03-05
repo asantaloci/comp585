@@ -12,7 +12,7 @@ public class InterviewProcess : MonoBehaviour
 
     private string playerName;
 
-    private string petType;
+    private string petType = "Cat";
 
     private string wish;
 
@@ -345,11 +345,13 @@ public class InterviewProcess : MonoBehaviour
             }
         }
 
-
+/*        GameObject global = GameObject.Find("Global");
+        GlobalVars globalVars = global.GetComponent<GlobalVars>();
+        Debug.Log(globalVars.playerEmail);*/
+        
         var user = new UserGenerator(petType, wish, petName, actions, obstacles);
         string json = JsonUtility.ToJson(user);
         FireSaver.SavePlayer(playerName, json);
-
 
     }
 

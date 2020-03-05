@@ -5,6 +5,7 @@ using UnityEngine;
 public class UserGenerator
 {
 
+
     public string petType;
     public string wish;
 
