@@ -72,12 +72,17 @@ public class Authentication : MonoBehaviour
                 return;
             }
 
+            // var user = new UserGenerator();
+            // string json = JsonUtility.ToJson(user);
+            // FireSaver.SavePlayer(username.text, json);
+            // SceneManager.LoadScene("adoption-interview");
+
             // Firebase user has been created.
             Firebase.Auth.FirebaseUser newUser = task.Result;
             Debug.LogFormat("Firebase user created successfully: {0} ({1})",
                 newUser.DisplayName, newUser.UserId);
 
-            SceneManager.LoadScene("adoption-interview");
+    
 
            /* GameObject global = GameObject.Find("Global");
             GlobalVars globalVars = global.GetComponent<GlobalVars>();
