@@ -19,6 +19,8 @@ public class Authentication : MonoBehaviour
     public InputField username;
     public InputField password;
 
+    public string userID;
+
     public void authenticate()
     {
         var auth = FirebaseAuth.DefaultInstance;
@@ -71,6 +73,11 @@ public class Authentication : MonoBehaviour
                 Debug.LogError("CreateUserWithEmailAndPasswordAsync encountered an error: " + task.Exception);
                 return;
             }
+
+            // var user = new UserGenerator();
+            // string json = JsonUtility.ToJson(user);
+            // FireSaver.SavePlayer(username.text, json);
+            
 
             // Firebase user has been created.
             Firebase.Auth.FirebaseUser newUser = task.Result;

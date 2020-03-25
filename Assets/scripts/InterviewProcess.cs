@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Firebase.Auth;
 
 public class InterviewProcess : MonoBehaviour
 {
@@ -22,20 +23,42 @@ public class InterviewProcess : MonoBehaviour
 
     private string[] obstacles = new string[8];
 
+    private string userID;
+
+    private string userEmail;
+
     private int actionstep = 0;
     private int obstaclestep = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        // FirebaseAuth.DefaultInstance.StateChanged += HandleAuthStateChanged;
+        // Debug.Log(FirebaseAuth.DefaultInstance.CurrentUser.Email);
+        if (FirebaseAuth.DefaultInstance.CurrentUser == null) {
+            this.userID = "default";
+            this.userEmail = "";
+        } else {
+            this.userID = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
+            this.userEmail = FirebaseAuth.DefaultInstance.CurrentUser.Email;
+        }
+
     }
+    
 
     // Update is called once per frame
     void Update()
     {
         
     }
+
+    // private void HandleAuthStateChanged(object sender, EventArgs e) {
+    //     CheckUser();
+    // }
+
+    // private void CheckUser(){
+    //     Debug.Log(FirebaseAuth.DefaultInstance.CurrentUser);
+    // }
 
     public void nameInput()
     {
@@ -329,11 +352,16 @@ public class InterviewProcess : MonoBehaviour
     public void completeAdoption()
     {
 
+        List<string> reducedActions = new List<string>();
+        List<string> reducedObstacles = new List<string>();
+
         for (int i = 0; i < 16; i++)
         {
             if (string.IsNullOrEmpty(actions[i]))
             {
                 actions[i] = "Unassigned";
+            } else {
+                reducedActions.Add(actions[i]);
             }
         }
 
@@ -342,16 +370,24 @@ public class InterviewProcess : MonoBehaviour
             if (string.IsNullOrEmpty(obstacles[j]))
             {
                 obstacles[j] = "Unassigned";
+            } else {
+                reducedObstacles.Add(obstacles[j]);
             }
         }
+
+        actions = reducedActions.ToArray();
+        obstacles = reducedObstacles.ToArray();
 
 /*        GameObject global = GameObject.Find("Global");
         GlobalVars globalVars = global.GetComponent<GlobalVars>();
         Debug.Log(globalVars.playerEmail);*/
         
-        var user = new UserGenerator(petType, wish, petName, actions, obstacles);
+        // var user = new UserGenerator(petType, wish, petName, actions, obstacles);
+        var user = new UserGenerator(playerName, wish, actions, obstacles, userEmail);
         string json = JsonUtility.ToJson(user);
-        FireSaver.SavePlayer(playerName, json);
+        // FireSaver.SavePlayer(playerName, json);
+        FireSaver.SavePlayer(userID, json);
+        // Debug.Log(email);
 
     }
 
