@@ -23,13 +23,18 @@ public class FireSaver : MonoBehaviour
         Debug.Log("save ran");
     }
 
-    public static void UpdatePlayer(string playerName, string field, string update) {
-        _database.GetReference(playerName).Child(field).SetValueAsync(update);
+    public static void UpdatePlayer(string playerID, string field, string update) {
+        _database.GetReference(playerID).Child(field).SetValueAsync(update);
 
         Debug.Log("updated player");
 
     }
 
+    public static void AddPet(string playerID, string petName, string json) {
+        // only changes first array pet for now (theoretically)
+        //BUT LATER MAKE IT A DICTIONARY WITH THE "0" REPLACED WITH PET NAME!!!
+        _database.GetReference(playerID).Child("currentPets").Child(petName).SetRawJsonValueAsync(json);
+    }
     // public static void UpdatePlayerPet(string playerName, string update) {
     //     //problem here is that you need to add to a list that's already an existant object in the database
     //     _database.GetReference(playerName).Child("currentPets").RawJsonValueAsync(update);

@@ -25,6 +25,8 @@ public class InterviewProcess : MonoBehaviour
 
     private string userID;
 
+    private string userEmail;
+
     private int actionstep = 0;
     private int obstaclestep = 0;
 
@@ -35,8 +37,10 @@ public class InterviewProcess : MonoBehaviour
         // Debug.Log(FirebaseAuth.DefaultInstance.CurrentUser.Email);
         if (FirebaseAuth.DefaultInstance.CurrentUser == null) {
             this.userID = "default";
+            this.userEmail = "";
         } else {
             this.userID = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
+            this.userEmail = FirebaseAuth.DefaultInstance.CurrentUser.Email;
         }
 
     }
@@ -348,11 +352,16 @@ public class InterviewProcess : MonoBehaviour
     public void completeAdoption()
     {
 
+        List<string> reducedActions = new List<string>();
+        List<string> reducedObstacles = new List<string>();
+
         for (int i = 0; i < 16; i++)
         {
             if (string.IsNullOrEmpty(actions[i]))
             {
                 actions[i] = "Unassigned";
+            } else {
+                reducedActions.Add(actions[i]);
             }
         }
 
@@ -361,15 +370,20 @@ public class InterviewProcess : MonoBehaviour
             if (string.IsNullOrEmpty(obstacles[j]))
             {
                 obstacles[j] = "Unassigned";
+            } else {
+                reducedObstacles.Add(obstacles[j]);
             }
         }
+
+        actions = reducedActions.ToArray();
+        obstacles = reducedObstacles.ToArray();
 
 /*        GameObject global = GameObject.Find("Global");
         GlobalVars globalVars = global.GetComponent<GlobalVars>();
         Debug.Log(globalVars.playerEmail);*/
         
         // var user = new UserGenerator(petType, wish, petName, actions, obstacles);
-        var user = new UserGenerator(wish, actions, obstacles, userID);
+        var user = new UserGenerator(playerName, wish, actions, obstacles, userEmail);
         string json = JsonUtility.ToJson(user);
         // FireSaver.SavePlayer(playerName, json);
         FireSaver.SavePlayer(userID, json);

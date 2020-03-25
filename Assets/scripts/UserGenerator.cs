@@ -7,6 +7,7 @@ public class UserGenerator
 
 
     // public string petType;
+    public string name;
     public string wish;
 
     public string[] currentPets;
@@ -44,6 +45,8 @@ public class UserGenerator
     // public string obstacle8;
 
     public UserGenerator() {
+
+        this.name = "";
          // this.petType = petType;
         this.wish = "";
         // this.petName = petName;
@@ -56,8 +59,10 @@ public class UserGenerator
     }
 
     // public UserGenerator(string petType, string wish, string petName, string[] actions, string[] obstacles)
-    public UserGenerator(string wish, string[] actions, string[] obstacles, string email)
+    public UserGenerator(string name, string wish, string[] actions, string[] obstacles, string email)
     {
+
+        this.name = name;
         // this.petType = petType;
         this.wish = wish;
         // this.petName = petName;
@@ -65,8 +70,8 @@ public class UserGenerator
         this.actions = actions;
         this.obstacles = obstacles;
 
-        this.currentPets = new string[1];
-        this.formerPets = new string[1];
+        this.currentPets = new string[0];
+        this.formerPets = new string[0];
 
         this.email = email;
 

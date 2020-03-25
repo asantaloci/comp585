@@ -8,15 +8,18 @@ using UnityEngine.EventSystems;
     public class Animal : MonoBehaviour
     {
         
-        
-        public TextMesh animaltype;
-        
         public string animalName;
         public string animalType; //to assign correct image
+        public string[] habits = new string[1];
 
-        public int health;
+        public int health = 100;
 
-
+    // public Animal(string animalName, string animalType) {
+    //     this.animalName = animalName;
+    //     this.animalType = animalType;
+    //     this.habits = new string[1];
+    //     this.health = 100;
+    // }
     public void getType() {
         if (animalType.ToString() =="Cat") {
             Debug.Log("This is a cat");
