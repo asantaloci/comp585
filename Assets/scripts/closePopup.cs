@@ -17,6 +17,8 @@ public class closePopup : MonoBehaviour
     public GameObject popup;
     public GameObject animal;
 
+public GameObject blackcat;
+public GameObject cat;
     public Animal chosenpet;
 
     public Animal selected;
@@ -36,6 +38,20 @@ public class closePopup : MonoBehaviour
             this.userID = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
             // this.userEmail = FirebaseAuth.DefaultInstance.CurrentUser.Email;
         }
+
+ Debug.Log("“animal in room function”");
+        string petInRoom = FireSaver.GetPetType(userID);
+Debug.Log(FireSaver.GetPetType(userID));
+        if (petInRoom == "Cat") {
+Debug.Log("“orangecat”");
+            blackcat.SetActive(false);
+            cat.SetActive(true);
+        } else {
+         Debug.Log("“black cat”");
+         cat.SetActive(false);
+         blackcat.SetActive(true);
+     }
+
     }
     public void close()
     {
