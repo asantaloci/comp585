@@ -7,6 +7,9 @@ public class actions : MonoBehaviour
 {
     float timer = 20;
     public GameObject walk;
+    public GameObject play;
+    public GameObject water;
+    public GameObject feed;
     public Text selectedtext;
 
 
@@ -31,9 +34,17 @@ Debug.Log(selectedtext.text.ToString()); // THIS IS IT!!
            Debug.Log("walk!");
         walk.SetActive(true);
     }
-    else {
-          Debug.Log("other!");
-        // walk.SetActive(true);
+    else if (selectedtext.text.ToString() == "Play") {
+           Debug.Log("play!");
+        play.SetActive(true);
+    }
+    else if (selectedtext.text.ToString() == "Water") {
+           Debug.Log("water!");
+        water.SetActive(true);
+    }
+    else if (selectedtext.text.ToString() == "Feed") {
+           Debug.Log("feed!");
+        feed.SetActive(true);
     }
     
    }
