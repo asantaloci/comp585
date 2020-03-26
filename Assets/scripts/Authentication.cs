@@ -84,7 +84,7 @@ public class Authentication : MonoBehaviour
             Debug.LogFormat("Firebase user created successfully: {0} ({1})",
                 newUser.DisplayName, newUser.UserId);
 
-            SceneManager.LoadScene("adoption-interview");
+            SceneManager.LoadScene("newplayer-interview");
 
            /* GameObject global = GameObject.Find("Global");
             GlobalVars globalVars = global.GetComponent<GlobalVars>();
