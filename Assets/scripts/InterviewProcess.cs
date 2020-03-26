@@ -11,13 +11,13 @@ public class InterviewProcess : MonoBehaviour
     public Text test;
     public Text dialogueText;
 
-    private string playerName;
+    //private string playerName;
 
-    private string petType = "Cat";
+    //private string petType;
 
-    private string wish;
+    //private string wish;
 
-    private string petName;
+    //private string petName;
 
     private string[] actions = new string[16];
 
@@ -60,7 +60,7 @@ public class InterviewProcess : MonoBehaviour
     //     Debug.Log(FirebaseAuth.DefaultInstance.CurrentUser);
     // }
 
-    public void nameInput()
+ /*   public void nameInput()
     {
 
         if (!playerInputField.text.Equals(""))
@@ -92,6 +92,7 @@ public class InterviewProcess : MonoBehaviour
             playerInputField.text = string.Empty;
         }
     }
+*/
 
     public void actionInput()
     {
@@ -383,10 +384,10 @@ public class InterviewProcess : MonoBehaviour
         Debug.Log(globalVars.playerEmail);*/
         
         // var user = new UserGenerator(petType, wish, petName, actions, obstacles);
-        var user = new UserGenerator(playerName, wish, actions, obstacles, userEmail);
+        var user = new UserGenerator(actions, obstacles);
         string json = JsonUtility.ToJson(user);
         // FireSaver.SavePlayer(playerName, json);
-        FireSaver.SavePlayer(userID, json);
+        FireSaver.AdoptPet(userID, json);
         // Debug.Log(email);
 
     }
