@@ -41,7 +41,7 @@ public GameObject cat;
 
  Debug.Log("“animal in room function”");
         string petInRoom = FireSaver.GetPetType(userID);
-Debug.Log(FireSaver.GetPetType(userID));
+// Debug.Log(FireSaver.GetPetType(userID));
         if (petInRoom == "Cat") {
 Debug.Log("“orangecat”");
             blackcat.SetActive(false);
