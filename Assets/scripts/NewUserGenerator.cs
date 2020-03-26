@@ -30,8 +30,8 @@ public class NewUserGenerator
         this.wish = wish;
         this.email = email;
 
-        this.currentPets = new string[1];
-        this.formerPets = new string[1];
+        this.currentPets = new string[0];
+        this.formerPets = new string[0];
 
     }
 
