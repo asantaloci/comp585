@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Firebase.Auth;
+using Firebase.Database;
+using static Firebase.Extensions.TaskExtension;
 
 
 public class closePopup : MonoBehaviour
 {
+
     public TextMesh selectedtext;
     public string animalType; // i changed this
     public TextMesh animalselection;
@@ -31,18 +34,19 @@ public GameObject cat;
         if (FirebaseAuth.DefaultInstance.CurrentUser == null)
         {
             this.userID = "default";
+            
             // this.userEmail = "";
         }
         else
         {
             this.userID = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
+           
             // this.userEmail = FirebaseAuth.DefaultInstance.CurrentUser.Email;
-
+//  Debug.Log("please work" + FireSaver.GetPetType(userID));
  Debug.Log("“animal in room function”");
-        string petInRoom = FireSaver.GetPetType(userID);
-
-Debug.Log(FireSaver.GetPetType(userID));
-        if (petInRoom == "Cat") {
+ 
+         Debug.Log("please work" + FireSaver.GetPetType(userID));
+        if (FireSaver.GetPetType(userID) == "Poopy") {
 Debug.Log("“orangecat”");
             blackcat.SetActive(false);
             cat.SetActive(true);
@@ -51,22 +55,57 @@ Debug.Log("“orangecat”");
          cat.SetActive(false);
          blackcat.SetActive(true);
      }
+
+// Debug.Log(petInRoom);
+
+
         }
 
+// Debug.Log("please work" + FireSaver.GetPetType(userID));
+    }
 
+    void Update() {
+        // Debug.Log("please work" + FireSaver.GetPetType(userID));
+    }
+
+
+
+    void work() {
+        
     }
 
     
     public void close()
     {
         popup.SetActive(false);
-
+Debug.Log("please work now" + FireSaver.GetPetType(userID));
         // Text txt = transform.Find("Text").GetComponent<Text>();
         // if (selectedtext.enabled) {
         //     print("pressed");
         //     popup.SetActive(false);
         // }
     }
+    
+    public void closeHabit()
+    {
+StartCoroutine(ButtonDelay());
+        // habitlist.SetActive(false);
+//   StartCoroutine(ButtonDelay());
+        // Text txt = transform.Find(“Text”).GetComponent<Text>();
+        // if (selectedtext.enabled) {
+        //     print(“pressed”);
+        //     popup.SetActive(false);
+        // }
+        // habitlist.gameObject.SetActive(true);
+    }
+    IEnumerator ButtonDelay()
+{
+    Debug.Log(Time.time);
+    yield return new WaitForSeconds(3f);
+    Debug.Log(Time.time);
+popup.SetActive(false);
+    // This line will be executed after 10 seconds passed
+}
     public void selectanimal()
     {
         popup.SetActive(false);
@@ -80,7 +119,7 @@ Debug.Log("“orangecat”");
             chosenpet.animalType = "Cat";   //set the chosen pet object to that 
             chosenpet.health = 100;
             selectedAnimalType = "Cat";
-            chosenpet.animalName = "Poopy";
+            chosenpet.animalName = "Cat";
             output.text = "You chose: " + chosenpet.animalType;
             string json = JsonUtility.ToJson(chosenpet);
             FireSaver.AddPet(userID, chosenpet.animalName, json);

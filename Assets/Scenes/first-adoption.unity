@@ -159,7 +159,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 2
@@ -210,8 +210,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: -5.7, y: -29.75}
+  m_SizeDelta: {x: 639.6, y: 246.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &161877768
 GameObject:
@@ -326,6 +326,8 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1143798235}
   animal: {fileID: 0}
+  blackcat: {fileID: 0}
+  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -541,7 +543,7 @@ RectTransform:
   m_Children:
   - {fileID: 1143798236}
   m_Father: {fileID: 851012271}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -933,6 +935,8 @@ MonoBehaviour:
   output: {fileID: 257129349}
   popup: {fileID: 0}
   animal: {fileID: 0}
+  blackcat: {fileID: 0}
+  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -973,8 +977,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -110, y: 30}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -154, y: 76}
+  m_SizeDelta: {x: 265.3, y: 97.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271211594
 MonoBehaviour:
@@ -1063,8 +1067,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 346c24053646347f4baa4d127a371838, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1344,6 +1348,8 @@ MonoBehaviour:
   output: {fileID: 257129349}
   popup: {fileID: 1143798235}
   animal: {fileID: 0}
+  blackcat: {fileID: 0}
+  cat: {fileID: 0}
   chosenpet: {fileID: 259987428}
   selected: {fileID: 247910615}
   userID: 
@@ -1638,6 +1644,8 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1327195075}
   animal: {fileID: 0}
+  blackcat: {fileID: 0}
+  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -1911,13 +1919,13 @@ RectTransform:
   m_Children:
   - {fileID: 329751135}
   - {fileID: 259987431}
-  - {fileID: 1854660298}
   - {fileID: 1617859532}
   - {fileID: 1116935101}
   - {fileID: 1451246689}
   - {fileID: 1772736236}
   - {fileID: 1031837348}
   - {fileID: 247910614}
+  - {fileID: 1854660298}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2316,7 +2324,7 @@ RectTransform:
   m_Children:
   - {fileID: 954156076}
   m_Father: {fileID: 851012271}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -2350,6 +2358,7 @@ MonoBehaviour:
   chosenpet: {fileID: 259987428}
   blackcat: {fileID: 247910613}
   cat: {fileID: 1854660292}
+  userID: 
 --- !u!114 &1031837351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2480,7 +2489,7 @@ Transform:
   m_LocalScale: {x: 0.69853663, y: 0.69023997, z: 0.69023997}
   m_Children: []
   m_Father: {fileID: 851012271}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1116935102
 SpriteRenderer:
@@ -2591,6 +2600,8 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1143798235}
   animal: {fileID: 0}
+  blackcat: {fileID: 0}
+  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -2747,8 +2758,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -7}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0.049987, y: -16}
+  m_SizeDelta: {x: 265.2, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1291038702
 MonoBehaviour:
@@ -2770,10 +2781,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 1
@@ -2847,6 +2858,8 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1327195075}
   animal: {fileID: 1854660292}
+  blackcat: {fileID: 0}
+  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -3233,6 +3246,8 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1143798235}
   animal: {fileID: 0}
+  blackcat: {fileID: 0}
+  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -3559,6 +3574,8 @@ MonoBehaviour:
   output: {fileID: 257129349}
   popup: {fileID: 1327195075}
   animal: {fileID: 0}
+  blackcat: {fileID: 0}
+  cat: {fileID: 0}
   chosenpet: {fileID: 259987428}
   selected: {fileID: 1854660294}
   userID: 
@@ -3770,12 +3787,12 @@ RectTransform:
   - {fileID: 13526845}
   - {fileID: 271211593}
   m_Father: {fileID: 851012271}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.025024414, y: 157.96997}
-  m_SizeDelta: {x: -0.049988, y: 315.95}
+  m_AnchoredPosition: {x: 0.025024414, y: 208}
+  m_SizeDelta: {x: -0, y: 416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1451246690
 MonoBehaviour:
@@ -3919,6 +3936,8 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 0}
   animal: {fileID: 0}
+  blackcat: {fileID: 0}
+  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -4090,7 +4109,7 @@ RectTransform:
   m_LocalScale: {x: 0.32625, y: 0.32625, z: 0.32625}
   m_Children: []
   m_Father: {fileID: 851012271}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4210,6 +4229,8 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1327195075}
   animal: {fileID: 0}
+  blackcat: {fileID: 0}
+  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -4404,6 +4425,7 @@ GameObject:
   - component: {fileID: 1772736239}
   - component: {fileID: 1772736238}
   - component: {fileID: 1772736237}
+  - component: {fileID: 1772736241}
   m_Layer: 5
   m_Name: DialogueButton
   m_TagString: Untagged
@@ -4424,12 +4446,12 @@ RectTransform:
   m_Children:
   - {fileID: 275269193}
   m_Father: {fileID: 851012271}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 203, y: -445}
-  m_SizeDelta: {x: 200, y: 61.1}
+  m_AnchoredPosition: {x: 638.2, y: -638}
+  m_SizeDelta: {x: 267.9, y: 87.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772736237
 MonoBehaviour:
@@ -4446,9 +4468,9 @@ MonoBehaviour:
   dialogue:
     name: Petshop Owner
     sentences:
-    - 'Welcome to the pet shop! '
-    - This is a test!
-    - Before you adopt a pet, let's see what kind of pet owner you'll be...
+    - Welcome to the adoption center!
+    - Select one of the cats you'd like to adopt.
+    - Press continue once you've made your selection!
 --- !u!114 &1772736238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4503,6 +4525,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1772736241}
+        m_MethodName: close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1772736239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4539,6 +4572,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772736235}
   m_CullTransparentMesh: 0
+--- !u!114 &1772736241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772736235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c67b60b15cd744bf8b342f082ed2dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedtext: {fileID: 0}
+  animalType: 
+  animalselection: {fileID: 0}
+  output: {fileID: 0}
+  popup: {fileID: 1772736235}
+  animal: {fileID: 0}
+  blackcat: {fileID: 0}
+  cat: {fileID: 0}
+  chosenpet: {fileID: 0}
+  selected: {fileID: 0}
+  userID: 
 --- !u!1 &1840155061
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,7 +4633,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
@@ -4613,8 +4669,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -30}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 197, y: -50.9}
+  m_SizeDelta: {x: 354, y: 71.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1854660292
 GameObject:
@@ -4781,7 +4837,7 @@ RectTransform:
   m_Children:
   - {fileID: 1327195080}
   m_Father: {fileID: 851012271}
-  m_RootOrder: 2
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
