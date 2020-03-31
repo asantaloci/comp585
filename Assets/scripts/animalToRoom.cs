@@ -80,13 +80,13 @@ public class animalToRoom : MonoBehaviour
     
     void Update() {
         // Debug.Log(chosenpet);
-        if((chosenpet == "Cat" || chosenpet == "blackCat")) {
+        if((chosenpet == "Cat" || chosenpet == "blackCat" || chosenpet == "Poopy" || chosenpet == "poopy2")) {
         // GetUsers();
 //  Debug.Log("“animal in room function”");
  Debug.Log(chosenpet);
  
         //  Debug.Log("please work" + GetPetType(userID));
-        if (chosenpet == "Cat") {
+        if (chosenpet == "Cat" || chosenpet == "Poopy") {
 // Debug.Log("“orangecat”");
             blackcat.SetActive(false);
             cat.SetActive(true);
