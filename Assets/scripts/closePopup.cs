@@ -37,11 +37,11 @@ public GameObject cat;
         {
             this.userID = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
             // this.userEmail = FirebaseAuth.DefaultInstance.CurrentUser.Email;
-        }
 
  Debug.Log("“animal in room function”");
         string petInRoom = FireSaver.GetPetType(userID);
-// Debug.Log(FireSaver.GetPetType(userID));
+
+Debug.Log(FireSaver.GetPetType(userID));
         if (petInRoom == "Cat") {
 Debug.Log("“orangecat”");
             blackcat.SetActive(false);
@@ -51,8 +51,12 @@ Debug.Log("“orangecat”");
          cat.SetActive(false);
          blackcat.SetActive(true);
      }
+        }
+
 
     }
+
+    
     public void close()
     {
         popup.SetActive(false);

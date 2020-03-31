@@ -8462,8 +8462,8 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 0}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
+  blackcat: {fileID: 2084197724}
+  cat: {fileID: 728057791}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -8545,7 +8545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CAT
+  m_text: Cat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
