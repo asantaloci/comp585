@@ -60,40 +60,40 @@ public class FireSaver : MonoBehaviour
         
     }
 
-    public static string GetPetType(string playerID)
-    {
+    // public static string GetPetType(string playerID)
+    // {
         
-        string petUpdate = "Poopy";
-        while(petUpdate == "Poopy") {
-        _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
-        {
+    //     string petUpdate = "Poopy";
+    //     while(petUpdate == "Poopy") {
+    //     _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
+    //     {
             
-            if (task.IsCanceled)
-            {
-                Debug.Log("Could Not Retrieve Active Pet");
-                return "";
-            }
-            if (task.IsFaulted)
-            {
-                Debug.LogError("Could Not Retrieve Active Pet: " + task.Exception);
-                return "";
-            }
+    //         if (task.IsCanceled)
+    //         {
+    //             Debug.Log("Could Not Retrieve Active Pet");
+    //             return "";
+    //         }
+    //         if (task.IsFaulted)
+    //         {
+    //             Debug.LogError("Could Not Retrieve Active Pet: " + task.Exception);
+    //             return "";
+    //         }
 
-            DataSnapshot snapshot = task.Result;
-            petUpdate = snapshot.Value.ToString();
-            Debug.Log("snapshot" + petUpdate);
-            string updatedPet = PetTypeValue(playerID, petUpdate); // this doesn't work
-            Debug.Log(playerID);
-            Debug.Log("COME ONE" + petUpdate);
-            // return updatedPet;
+    //         DataSnapshot snapshot = task.Result;
+    //         petUpdate = snapshot.Value.ToString();
+    //         Debug.Log("snapshot" + petUpdate);
+    //         string updatedPet = PetTypeValue(playerID, petUpdate); // this doesn't work
+    //         Debug.Log(playerID);
+    //         Debug.Log("COME ONE" + petUpdate);
+    //         // return updatedPet;
             
-            return petUpdate;
+    //         return petUpdate;
             
-        });
-        return petUpdate;
-        }
-        return petUpdate;
-    }
+    //     });
+    //     return petUpdate;
+    //     }
+    //     return petUpdate;
+    // }
     
 // // original
 //     private static string PetTypeValue(string playerID, string petName)
@@ -127,34 +127,34 @@ public class FireSaver : MonoBehaviour
 
 
 
-  private static string PetTypeValue(string playerID, string petName)
-    {
+//   private static string PetTypeValue(string playerID, string petName)
+//     {
 
-        string petUpdate = "";
+//         string petUpdate = "";
 
-        _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
-        {
-            if (task.IsCanceled)
-            {
-                Debug.Log("Could Not Retrieve Active Pet Type");
-                return "";
-            }
-            if (task.IsFaulted)
-            {
-                Debug.LogError("Could Not Retrieve Active Pet Type: " + task.Exception);
-                return "";
-            }
+//         _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
+//         {
+//             if (task.IsCanceled)
+//             {
+//                 Debug.Log("Could Not Retrieve Active Pet Type");
+//                 return "";
+//             }
+//             if (task.IsFaulted)
+//             {
+//                 Debug.LogError("Could Not Retrieve Active Pet Type: " + task.Exception);
+//                 return "";
+//             }
             
-            DataSnapshot snapshot = task.Result;
-            // Debug.Log("petupdate in pettylevalue" + snapshot);
-            petUpdate = snapshot.Value.ToString();
-            // Debug.Log("petupdate in pettylevalue " + petUpdate);
-            return petUpdate;
+//             DataSnapshot snapshot = task.Result;
+//             // Debug.Log("petupdate in pettylevalue" + snapshot);
+//             petUpdate = snapshot.Value.ToString();
+//             // Debug.Log("petupdate in pettylevalue " + petUpdate);
+//             return petUpdate;
 
 
-        });
-        return petUpdate;
-    }
+//         });
+//         return petUpdate;
+//     }
 
 
 

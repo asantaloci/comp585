@@ -326,8 +326,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1143798235}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -562,7 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f5f3a04b77e40ac8877099ff25a3d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalName: Poopy2
+  animalName: blackCat
   animalType: blackCat
   habits:
   - 
@@ -935,8 +933,6 @@ MonoBehaviour:
   output: {fileID: 257129349}
   popup: {fileID: 0}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -1348,8 +1344,6 @@ MonoBehaviour:
   output: {fileID: 257129349}
   popup: {fileID: 1143798235}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 259987428}
   selected: {fileID: 247910615}
   userID: 
@@ -1644,8 +1638,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1327195075}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -2355,7 +2347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0632477402a1742b29821b5df62114ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chosenpet: {fileID: 259987428}
+  chosenpet: 
+  wee: 0
   blackcat: {fileID: 247910613}
   cat: {fileID: 1854660292}
   userID: 
@@ -2600,8 +2593,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1143798235}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -2858,8 +2849,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1327195075}
   animal: {fileID: 1854660292}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -3246,8 +3235,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1143798235}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -3574,8 +3561,6 @@ MonoBehaviour:
   output: {fileID: 257129349}
   popup: {fileID: 1327195075}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 259987428}
   selected: {fileID: 1854660294}
   userID: 
@@ -3936,8 +3921,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 0}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -4229,8 +4212,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1327195075}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -4590,8 +4571,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1772736235}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -4718,7 +4697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f5f3a04b77e40ac8877099ff25a3d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalName: Poopy
+  animalName: Cat
   animalType: Cat
   habits:
   - 

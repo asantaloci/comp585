@@ -233,8 +233,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 322908616}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -529,8 +527,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 322908616}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -1209,8 +1205,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1371290251}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -1502,8 +1496,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1371290251}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -1723,8 +1715,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 195250524}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -2183,8 +2173,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 322908616}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -2479,8 +2467,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 322908616}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -2777,8 +2763,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1371290251}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -2999,8 +2983,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 322908616}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -3595,8 +3577,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1371290251}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -3716,8 +3696,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 426415797}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -4214,7 +4192,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443506456}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c67b60b15cd744bf8b342f082ed2dfd, type: 3}
   m_Name: 
@@ -4225,8 +4203,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 0}
   animal: {fileID: 0}
-  blackcat: {fileID: 2084197724}
-  cat: {fileID: 728057791}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -4343,8 +4319,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 322908616}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -4885,8 +4859,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 322908616}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -4989,8 +4961,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 528322717}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -5177,8 +5147,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 538144354}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -5348,8 +5316,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 667267178}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -6279,8 +6245,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 322908616}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -6437,8 +6401,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1371290251}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -6760,8 +6722,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1371290251}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -7002,8 +6962,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1087819675}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -8116,8 +8074,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 0}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -8463,8 +8419,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 0}
   animal: {fileID: 0}
-  blackcat: {fileID: 2084197724}
-  cat: {fileID: 728057791}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -8940,8 +8894,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 322908616}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -9502,8 +9454,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1371290251}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -9603,8 +9553,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1846144038}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -9933,8 +9881,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1907962586}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -10095,8 +10041,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1371290251}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -10280,8 +10224,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 322908616}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -10438,8 +10380,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 1371290251}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 

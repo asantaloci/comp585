@@ -16,6 +16,7 @@ public class NewBehaviourScript : MonoBehaviour
     public void AddRoom()
     {
         Application.LoadLevel("room");
+        
     }
     public void ADDSetting()
     {
@@ -37,6 +38,6 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+            
     }
 }

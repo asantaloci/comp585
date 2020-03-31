@@ -327,13 +327,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 0}
-  animaltype: 
+  animalType: 
   animalselection: {fileID: 0}
   output: {fileID: 1479103823}
   popup: {fileID: 0}
   animal: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
+  userID: 
 --- !u!1 &242983260
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,13 +443,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 242983264}
-  animaltype: 
+  animalType: 
   animalselection: {fileID: 0}
   output: {fileID: 0}
   popup: {fileID: 2083587718}
   animal: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
+  userID: 
 --- !u!102 &242983264
 TextMesh:
   serializedVersion: 3
@@ -735,13 +737,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 285453428}
-  animaltype: 
+  animalType: 
   animalselection: {fileID: 0}
   output: {fileID: 0}
   popup: {fileID: 1528774131}
   animal: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
+  userID: 
 --- !u!102 &285453428
 TextMesh:
   serializedVersion: 3
@@ -1261,13 +1264,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 0}
-  animaltype: 
+  animalType: 
   animalselection: {fileID: 722702555}
   output: {fileID: 0}
   popup: {fileID: 0}
   animal: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
+  userID: 
 --- !u!102 &722702555
 TextMesh:
   serializedVersion: 3
@@ -1889,13 +1893,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 868368344}
-  animaltype: 
+  animalType: 
   animalselection: {fileID: 722702555}
   output: {fileID: 1479103823}
   popup: {fileID: 1528774131}
   animal: {fileID: 0}
   chosenpet: {fileID: 1591440323}
   selected: {fileID: 996236379}
+  userID: 
 --- !u!114 &868368347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1908,9 +1913,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f5f3a04b77e40ac8877099ff25a3d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animaltype: {fileID: 1322146170}
   animalName: Poopy
   animalType: Cat
+  habits:
+  - 
   health: 0
 --- !u!1 &981590344
 GameObject:
@@ -2186,9 +2192,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f5f3a04b77e40ac8877099ff25a3d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animaltype: {fileID: 1322146170}
-  animalName: Poopy
+  animalName: Cat
   animalType: Cat
+  habits:
+  - 
   health: 0
 --- !u!1 &1046833215
 GameObject:
@@ -2301,13 +2308,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 1046833216}
-  animaltype: 
+  animalType: 
   animalselection: {fileID: 0}
   output: {fileID: 0}
   popup: {fileID: 2083587718}
   animal: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
+  userID: 
 --- !u!23 &1046833219
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2667,13 +2675,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 1322146170}
-  animaltype: 
+  animalType: 
   animalselection: {fileID: 0}
   output: {fileID: 0}
   popup: {fileID: 1528774131}
   animal: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
+  userID: 
 --- !u!23 &1322146173
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3312,13 +3321,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 868368344}
-  animaltype: 
+  animalType: 
   animalselection: {fileID: 1589124513}
   output: {fileID: 0}
   popup: {fileID: 1528774131}
   animal: {fileID: 996236373}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
+  userID: 
 --- !u!114 &1528774136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3331,9 +3341,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f5f3a04b77e40ac8877099ff25a3d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animaltype: {fileID: 1322146170}
   animalName: Poopy
   animalType: Cat
+  habits:
+  - 
   health: 20
 --- !u!1 &1567027426
 GameObject:
@@ -3729,9 +3740,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f5f3a04b77e40ac8877099ff25a3d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animaltype: {fileID: 1046833216}
-  animalName: Poopy2
+  animalName: blackCat
   animalType: blackCat
+  habits:
+  - 
   health: 20
 --- !u!102 &1589124513 stripped
 TextMesh:
@@ -3865,13 +3877,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 1736637137}
-  animaltype: 
+  animalType: 
   animalselection: {fileID: 722702555}
   output: {fileID: 1479103823}
   popup: {fileID: 2083587718}
   animal: {fileID: 0}
   chosenpet: {fileID: 1591440323}
   selected: {fileID: 1587927477}
+  userID: 
 --- !u!102 &1736637137
 TextMesh:
   serializedVersion: 3
@@ -4371,9 +4384,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0632477402a1742b29821b5df62114ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chosenpet: {fileID: 1591440323}
+  chosenpet: 
+  wee: 0
   blackcat: {fileID: 1587927471}
   cat: {fileID: 996236373}
+  userID: 
 --- !u!1 &2018398094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4522,13 +4537,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedtext: {fileID: 1736637137}
-  animaltype: 
+  animalType: 
   animalselection: {fileID: 722702555}
   output: {fileID: 0}
   popup: {fileID: 2083587718}
   animal: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
+  userID: 
 --- !u!114 &2083587721
 MonoBehaviour:
   m_ObjectHideFlags: 0
