@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Firebase.Auth;
+using Firebase.Database;
+using static Firebase.Extensions.TaskExtension;
 
 public class animalToRoom : MonoBehaviour
     {
@@ -10,11 +13,29 @@ public class animalToRoom : MonoBehaviour
         public Animal chosenpet;
         public GameObject blackcat;
         public GameObject cat;
-        
+        public string userID;
 
-        
+        // void Start() {if (FirebaseAuth.DefaultInstance.CurrentUser == null)
+        // {
+        //     this.userID = "default";
+          
+        //     // this.userEmail = "";
+        // }
+
+        // else
+        // {
+        //     this.userID = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
+        //     Debug.Log("please work" + FireSaver.GetPetType(userID));
+        // }
+        //     Debug.Log(FireSaver.GetPetType(userID)+ "god help me");
+        //     Debug.Log(chosenpet.animalType);
+
+        //       Debug.Log("please work" + FireSaver.GetPetType(userID));
+        //       Debug.Log(FireSaver.GetPetType(userID)+ "god help me");
+        //     Debug.Log(chosenpet.animalType);
+        // }
          public void selectToRoom() {
-
+Debug.Log(FireSaver.GetPetType(userID)+ "god help me");
              Debug.Log(chosenpet.animalType);
 
 
