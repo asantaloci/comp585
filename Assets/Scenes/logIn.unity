@@ -1205,8 +1205,6 @@ MonoBehaviour:
   output: {fileID: 0}
   popup: {fileID: 987923659}
   animal: {fileID: 0}
-  blackcat: {fileID: 0}
-  cat: {fileID: 0}
   chosenpet: {fileID: 0}
   selected: {fileID: 0}
   userID: 
@@ -1265,7 +1263,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c0bf4fd49df00416cb6e2722d1968f2b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9cd206d315ed1421bbed1a7b1f06ecda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

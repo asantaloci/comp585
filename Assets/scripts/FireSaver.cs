@@ -60,48 +60,79 @@ public class FireSaver : MonoBehaviour
         
     }
 
-    public static string GetPetType(string playerID)
-    {
+//     public static string GetPetType(string playerID)
+//     {
         
-        string petUpdate = "Poopy";
-        while(petUpdate == "Poopy") {
-        _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
-        {
+//         string petUpdate = "Poopy";
+//         while(petUpdate == "Poopy") {
+//         _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
+//         {
             
-            if (task.IsCanceled)
-            {
-                Debug.Log("Could Not Retrieve Active Pet");
-                return "";
-            }
-            if (task.IsFaulted)
-            {
-                Debug.LogError("Could Not Retrieve Active Pet: " + task.Exception);
-                return "";
-            }
+//             if (task.IsCanceled)
+//             {
+//                 Debug.Log("Could Not Retrieve Active Pet");
+//                 return "";
+//             }
+//             if (task.IsFaulted)
+//             {
+//                 Debug.LogError("Could Not Retrieve Active Pet: " + task.Exception);
+//                 return "";
+//             }
 
-            DataSnapshot snapshot = task.Result;
-            petUpdate = snapshot.Value.ToString();
-            Debug.Log("snapshot" + petUpdate);
-            string updatedPet = PetTypeValue(playerID, petUpdate); // this doesn't work
-            Debug.Log(playerID);
-            Debug.Log("COME ONE" + petUpdate);
-            // return updatedPet;
+//             DataSnapshot snapshot = task.Result;
+//             petUpdate = snapshot.Value.ToString();
+//             Debug.Log("snapshot" + petUpdate);
+//             string updatedPet = PetTypeValue(playerID, petUpdate); // this doesn't work
+//             Debug.Log(playerID);
+//             Debug.Log("COME ONE" + petUpdate);
+//             // return updatedPet;
             
-            return petUpdate;
+//             return petUpdate;
             
-        });
-        return petUpdate;
-        }
-        return petUpdate;
-    }
+//         });
+//         return petUpdate;
+//         }
+//         return petUpdate;
+//     }
     
-// // original
-//     private static string PetTypeValue(string playerID, string petName)
+// // // original
+// //     private static string PetTypeValue(string playerID, string petName)
+// //     {
+
+// //         string petUpdate = "";
+
+// //         _database.GetReference(playerID).Child(petName).Child("petType").GetValueAsync().ContinueWithOnMainThread(task =>
+// //         {
+// //             if (task.IsCanceled)
+// //             {
+// //                 Debug.Log("Could Not Retrieve Active Pet Type");
+// //                 return "";
+// //             }
+// //             if (task.IsFaulted)
+// //             {
+// //                 Debug.LogError("Could Not Retrieve Active Pet Type: " + task.Exception);
+// //                 return "";
+// //             }
+            
+// //             DataSnapshot snapshot = task.Result;
+// //             Debug.Log("petupdate in pettylevalue" + snapshot);
+// //             petUpdate = snapshot.Value.ToString();
+// //             Debug.Log("petupdate in pettylevalue" + petUpdate);
+// //             return petUpdate;
+
+
+// //         });
+// //         return "";
+// //     }
+
+
+
+//   private static string PetTypeValue(string playerID, string petName)
 //     {
 
 //         string petUpdate = "";
 
-//         _database.GetReference(playerID).Child(petName).Child("petType").GetValueAsync().ContinueWithOnMainThread(task =>
+//         _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
 //         {
 //             if (task.IsCanceled)
 //             {
@@ -115,46 +146,15 @@ public class FireSaver : MonoBehaviour
 //             }
             
 //             DataSnapshot snapshot = task.Result;
-//             Debug.Log("petupdate in pettylevalue" + snapshot);
+//             // Debug.Log("petupdate in pettylevalue" + snapshot);
 //             petUpdate = snapshot.Value.ToString();
-//             Debug.Log("petupdate in pettylevalue" + petUpdate);
+//             // Debug.Log("petupdate in pettylevalue " + petUpdate);
 //             return petUpdate;
 
 
 //         });
-//         return "";
+//         return petUpdate;
 //     }
-
-
-
-  private static string PetTypeValue(string playerID, string petName)
-    {
-
-        string petUpdate = "";
-
-        _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
-        {
-            if (task.IsCanceled)
-            {
-                Debug.Log("Could Not Retrieve Active Pet Type");
-                return "";
-            }
-            if (task.IsFaulted)
-            {
-                Debug.LogError("Could Not Retrieve Active Pet Type: " + task.Exception);
-                return "";
-            }
-            
-            DataSnapshot snapshot = task.Result;
-            // Debug.Log("petupdate in pettylevalue" + snapshot);
-            petUpdate = snapshot.Value.ToString();
-            // Debug.Log("petupdate in pettylevalue " + petUpdate);
-            return petUpdate;
-
-
-        });
-        return petUpdate;
-    }
 
 
 
