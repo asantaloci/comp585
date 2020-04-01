@@ -94,4 +94,10 @@ public class Authentication : MonoBehaviour
         //Debug.Log("ran and maybe finished registration");
         
     }
+
+    public static void LogoutPlayer() {
+        // var auth = ;
+        FirebaseAuth.DefaultInstance.SignOut();
+        Debug.Log("Logout sucess");
+    }
 }

@@ -201,8 +201,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1518346332}
   m_HandleRect: {fileID: 1518346331}
   m_Direction: 0
-  m_Value: 0.0000000801828
-  m_Size: 0.5070586
+  m_Value: 0
+  m_Size: 0.5070587
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6085,6 +6085,7 @@ GameObject:
   - component: {fileID: 686551606}
   - component: {fileID: 686551605}
   - component: {fileID: 686551608}
+  - component: {fileID: 686551609}
   m_Layer: 5
   m_Name: logout-button
   m_TagString: Untagged
@@ -6212,6 +6213,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5302bd850b666b42b24aa623db4c7ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &686551609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686551603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9999dc500114b37409a0292baa11ccf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &728057791
@@ -13061,7 +13074,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1018744442}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
