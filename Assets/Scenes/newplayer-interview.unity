@@ -1113,7 +1113,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Adoption Process
+  m_Text: 
 --- !u!222 &1064411445
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1538,13 +1538,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b76b3fa4dd9eb46f4b452ff60553859c, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 1
@@ -1555,7 +1555,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: '"We are what we continually do. Excellence, then, is not an act, but a
     habit!" Will Durant wrote that back in 1926, and it remains the core premise behind
     our Habit Pet Adoption Center!'
@@ -2773,7 +2773,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 03dc6ceca602e9f47bd67782a51826ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b2df049de02c4528b275bc0bbad6801, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -155,9 +155,9 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_SizeDelta: {x: -17, y: 20}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &20085804
 MonoBehaviour:
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1518346331}
   m_Direction: 0
   m_Value: 0.0000000801828
-  m_Size: 0.5070586
+  m_Size: 0.5168517
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6085,6 +6085,7 @@ GameObject:
   - component: {fileID: 686551606}
   - component: {fileID: 686551605}
   - component: {fileID: 686551608}
+  - component: {fileID: 686551609}
   m_Layer: 5
   m_Name: logout-button
   m_TagString: Untagged
@@ -6212,6 +6213,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5302bd850b666b42b24aa623db4c7ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &686551609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686551603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9999dc500114b37409a0292baa11ccf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &728057791
@@ -6400,8 +6413,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0053687}
-  m_SizeDelta: {x: 800, y: 1423.1}
+  m_AnchoredPosition: {x: 15.7, y: -8.1}
+  m_SizeDelta: {x: 831.3, y: 1438.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &737783447
 MonoBehaviour:
@@ -6426,8 +6439,8 @@ MonoBehaviour:
   m_Viewport: {fileID: 2044460636}
   m_HorizontalScrollbar: {fileID: 20085804}
   m_VerticalScrollbar: {fileID: 2118431522}
-  m_HorizontalScrollbarVisibility: 2
-  m_VerticalScrollbarVisibility: 2
+  m_HorizontalScrollbarVisibility: 1
+  m_VerticalScrollbarVisibility: 1
   m_HorizontalScrollbarSpacing: -3
   m_VerticalScrollbarSpacing: -3
   m_OnValueChanged:
@@ -12405,9 +12418,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2044460637
 MonoBehaviour:
@@ -13014,9 +13027,9 @@ RectTransform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_SizeDelta: {x: 20, y: -17}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2118431522
 MonoBehaviour:
@@ -13061,7 +13074,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1018744442}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

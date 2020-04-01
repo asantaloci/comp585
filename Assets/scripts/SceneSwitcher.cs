@@ -5,6 +5,7 @@ public class SceneSwitcher : MonoBehaviour
 {
       public void GotoLogin()
     {
+        Authentication.LogoutPlayer();
         SceneManager.LoadScene("logIn");
     }
     public void GotoAdoptionCenter()
