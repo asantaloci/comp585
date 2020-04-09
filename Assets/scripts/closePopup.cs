@@ -74,7 +74,7 @@ public class closePopup : MonoBehaviour
           //   Debug.Log(selected.animalType);
             chosenpet.animalType = selected.animalType;   //set the chosen pet object to that 
                                                           //  Debug.Log(chosenpet.animalType);
-            chosenpet.health = 20;
+            chosenpet.health = 100;
             selectedAnimalType = "blackCat";
             chosenpet.animalName = selected.animalName;
             output.text = "You chose: " + chosenpet.animalType;
