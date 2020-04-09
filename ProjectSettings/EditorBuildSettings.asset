@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/newplayer-interview.unity
     guid: 45f40f72c0bbc784ca536cdbcda9802b
+  - enabled: 1
+    path: Assets/Scenes/profile.unity
+    guid: dd4ae83a847bd42fe8c07042e3dd507b
   m_configObjects: {}

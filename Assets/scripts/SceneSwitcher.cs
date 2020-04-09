@@ -22,8 +22,16 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("adoption-interview");
     }
-      public void GotoBlank()
+      public void GotoStore()
+    {
+        SceneManager.LoadScene("store");
+    }
+       public void GotoSettings()
     {
         SceneManager.LoadScene("setting");
+    }
+          public void GotoProfile()
+    {
+        SceneManager.LoadScene("profile");
     }
 }
