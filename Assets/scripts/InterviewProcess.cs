@@ -385,9 +385,10 @@ public class InterviewProcess : MonoBehaviour
         
         // var user = new UserGenerator(petType, wish, petName, actions, obstacles);
         var user = new UserGenerator(actions, obstacles);
+        // Debug.Log(user.actions);
         string json = JsonUtility.ToJson(user);
         // FireSaver.SavePlayer(playerName, json);
-        FireSaver.AdoptPet(userID, json);
+        FireSaver.AdoptPet(userID, user.getDictionary());
         // Debug.Log(email);
 
     }

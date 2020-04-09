@@ -38,7 +38,7 @@ public class FireSaver : MonoBehaviour
         _database.GetReference(playerID).Child("activePet").SetValueAsync(petName);
     }
 
-    public static void AdoptPet(string playerID, string json)
+    public static void AdoptPet(string playerID, Dictionary<string, object> json) //, Dictionary<string, string> actions)
     {
         string petUpdate = "";
         _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWith(task => {
@@ -50,15 +50,22 @@ public class FireSaver : MonoBehaviour
             {
                 DataSnapshot snapshot = task.Result;
                 petUpdate = snapshot.Value.ToString();
-                _database.GetReference(playerID).Child("currentPets").Child(petUpdate).Child("habits").SetRawJsonValueAsync(json);
-                Debug.Log("save ran");
+                // string sampleJson = " {\"actions\": {\"water\": {\"habit\": \"jogging\", \"healvalue\": \"1\", \"hurtvalue\": \"1\", \"lastcared\": \"timestamp\", \"timeframe\": \"6\" }, {\"feed\": \"habit\": \"eating healthy\", \"healvalue\": \"1\", \"hurtvalue\": \"1\", \"lastcared\": \"timestamp\", \"timeframe\": \"6\" }}, \"obstacles\":[\"laziness\", \"money\"] } ";
+                // _database.GetReference(playerID).Child("currentPets").Child(petUpdate).Child("habits").Child("actions").SetValueAsync(actions);
+                // Dictionary<string, object> sampleJson = 
+                _database.GetReference(playerID).Child("currentPets").Child(petUpdate).Child("habits").SetValueAsync(json);
+                // _database.GetReference(playerID).Child("currentPets").Child(petUpdate).Child("habits").SetRawJsonValueAsync(json);
+                Debug.Log(json);
             }
         });
-        
 
         //_database.ref("users").Child(playerName).SetRawJsonValueAsync(json);
         
     }
+
+    // public static void AddActions
+
+
 
 //     public static string GetPetType(string playerID)
 //     {

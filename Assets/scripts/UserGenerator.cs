@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class UserGenerator
@@ -15,6 +16,7 @@ public class UserGenerator
     //public string[] formerPets;
 
     public string[] actions;
+    // public Dictionary<string, object> actions;
     public string[] obstacles; 
 
     //public string email;
@@ -52,7 +54,9 @@ public class UserGenerator
         //this.wish = "";
         // this.petName = petName;
 
-        this.actions = new string[1];
+        Dictionary<string, object> act = new Dictionary<string, object>();
+
+        this.actions = new string[1]; //act
         this.obstacles = new string[1];
 
         //this.currentPets = new string[1];
@@ -68,6 +72,28 @@ public class UserGenerator
         //this.wish = wish;
         // this.petName = petName;
 
+        string[] petActs = new string[] { "water", "feed", "walk", "pet", "groom", "bath", "six", "seven", "eight", "nine", "ten", "eleven", "thirteen", "fourteen", "fifteen", "sixteen" };
+
+        Dictionary<string, object> act = new Dictionary<string, object>();
+        // string timeStamp = GetTimestamp(new DateTime());
+        DateTime now = DateTime.Now;
+        string timeStamp = now.ToString();
+
+
+        // final: ' "actions": ["water": ["habit": "jogging", "healvalue": "1", "hurtvalue": "1", "lastcared": "timestamp", "timeframe": "6" ], "feed": ["habit": "eating healthy", "healvalue": "1", "hurtvalue": "1", "lastcared": "timestamp", "timeframe": "6" ]], "obstacles":["laziness", "money"] '
+        for (int i = 0; i < actions.Length; i++) {
+            HabitObject habitObj = new HabitObject(actions[i], 1, 1, timeStamp, 6);
+            // string temp = JsonUtility.ToJson(habitObj);
+            // temp["habit"] = actions[i];
+            // temp["healValue"] = 1;
+            // temp["hurtValue"] = 1;
+            // temp["lastCared"] = timeStamp;
+            // temp["timeFrame"] = 6;
+            
+            act[petActs[i]] = habitObj;
+        }
+
+        
         this.actions = actions;
         this.obstacles = obstacles;
 
@@ -76,31 +102,34 @@ public class UserGenerator
 
        // this.email = email;
 
-        // this.action1 = actions[0];
-        // this.action2 = actions[1];
-        // this.action3 = actions[2];
-        // this.action4 = actions[3];
-        // this.action5 = actions[4];
-        // this.action6 = actions[5];
-        // this.action7 = actions[6];
-        // this.action8 = actions[7];
-        // this.action9 = actions[8];
-        // this.action10 = actions[9];
-        // this.action11 = actions[10];
-        // this.action12 = actions[11];
-        // this.action13 = actions[12];
-        // this.action14 = actions[13];
-        // this.action15 = actions[14];
-        // this.action16 = actions[15];
+    }
 
-        // this.obstacle1 = obstacles[0];
-        // this.obstacle2 = obstacles[1];
-        // this.obstacle3 = obstacles[2];
-        // this.obstacle4 = obstacles[3];
-        // this.obstacle5 = obstacles[4];
-        // this.obstacle6 = obstacles[5];
-        // this.obstacle7 = obstacles[6];
-        // this.obstacle8 = obstacles[7];
+    public Dictionary<string, object> getDictionary(){
+        
+        string[] petActs = new string[] { "water", "feed", "walk", "pet", "groom", "bath", "six", "seven", "eight", "nine", "ten", "eleven", "thirteen", "fourteen", "fifteen", "sixteen" };
+        
+        DateTime now = DateTime.Now;
+        string timeStamp = now.ToString();
+        
+        Dictionary<string, object> mainJson = new Dictionary<string, object>();
+        Dictionary<string, object> acts = new Dictionary<string, object>();
+
+        for(int i = 0; i < this.actions.Length; i++) {
+            Dictionary<string, object> temp = new Dictionary<string, object>() {
+                {"habit", actions[i]},
+                {"healvalue", 1},
+                {"hurtvalue", 1},
+                {"lastcared", timeStamp},
+                {"timeframe", 6}
+            };
+
+            acts[petActs[i]] = temp;
+        }
+
+        mainJson["actions"] = acts;
+        mainJson["obstacles"] = this.obstacles;
+
+        return mainJson;
 
 
     }
