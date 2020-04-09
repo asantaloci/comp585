@@ -117,10 +117,10 @@ public class UserGenerator
         for(int i = 0; i < this.actions.Length; i++) {
             Dictionary<string, object> temp = new Dictionary<string, object>() {
                 {"habit", actions[i]},
-                {"healvalue", "1"},
-                {"hurtvalue", "1"},
+                {"healvalue", 1},
+                {"hurtvalue", 1},
                 {"lastcared", timeStamp},
-                {"timeframe", "6"}
+                {"timeframe", 6}
             };
 
             acts[petActs[i]] = temp;
