@@ -915,7 +915,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 58005244}
-        m_MethodName: GotoBlank
+        m_MethodName: GotoProfile
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9866,7 +9866,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1476429257}
-        m_MethodName: GotoBlank
+        m_MethodName: GotoSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11078,7 +11078,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1754130014}
-        m_MethodName: GotoBlank
+        m_MethodName: GotoStore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
