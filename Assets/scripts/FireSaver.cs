@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Firebase.Database;
+using Firebase.Auth;
 using System.Threading.Tasks;
 using static Firebase.Extensions.TaskExtension;
 
@@ -10,10 +12,12 @@ public class FireSaver : MonoBehaviour
     private const string PLAYER_KEY = "PLAYER_KEY";
     private static FirebaseDatabase _database;
 
+
     // Start is called before the first frame update
     void Start()
     {
         _database = FirebaseDatabase.DefaultInstance;
+
     }
 
     public static void SavePlayer(string playerName, string json)
@@ -63,105 +67,204 @@ public class FireSaver : MonoBehaviour
         
     }
 
+    public static void SetLastCare(string playerID, string petName, DataSnapshot care)
+    {
+        _database.GetReference(playerID).Child("currentPets").Child(petName).Child("habits").Child("actions").Child(care.Key.ToString()).Child("lastcared").SetValueAsync(DateTime.Now.ToString());
+    }
+
+    public static void HurtPet(string playerID, string activepet, DataSnapshot failedcare, Action<bool> callback)
+    {
+        int health;
+        int hurtvalue;
+        int newhealth;
+
+        _database.GetReference(playerID).Child("currentPets").Child(activepet).Child("health").GetValueAsync().ContinueWith(task => {
+            if (task.IsFaulted)
+            {
+                Debug.Log("Could not retrieve Pet Health");
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+                health = int.Parse(snapshot.Value.ToString());
+                hurtvalue = int.Parse(failedcare.Child("hurtvalue").Value.ToString());
+                newhealth = health - hurtvalue;
+                _database.GetReference(playerID).Child("currentPets").Child(activepet).Child("health").SetValueAsync(newhealth);
+                callback(true);
+            }
+        });
+    }
+
+    public async Task<bool> SaveExists()
+    {
+        var dataSnapshot = await _database.GetReference(PLAYER_KEY).GetValueAsync();
+        return dataSnapshot.Exists;
+    }
+
+    //Here are all of the Getters that can be accessed by other scripts
+
+    public static void GetPetHealth(Action<int> callback, string petName, string playerID)
+    {
+        _database.GetReference(playerID).Child("currentPets").Child(petName).Child("health").GetValueAsync().ContinueWith(task => {
+      if (task.IsFaulted)
+      {
+                Debug.Log("Could not retrieve Pet Health");
+          }
+      else if (task.IsCompleted)
+      {
+          DataSnapshot snapshot = task.Result;
+                callback(int.Parse(snapshot.Value.ToString())); //won't work yet
+          }
+  });
+    }
+
+    public static void GetCurrentPet(Action<string> callback, string playerID)
+    {
+        _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWith(task => {
+            if (task.IsFaulted)
+            {
+                Debug.Log("Could not retrieve active pet");
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+                callback(snapshot.Value.ToString()); 
+            }
+        });
+    }
+
+    public static void GetPetType(Action<string> callback, string playerID, string petName)
+    {
+        _database.GetReference(playerID).Child("currentPets").Child(petName).Child("animalType").GetValueAsync().ContinueWith(task => {
+            if (task.IsFaulted)
+            {
+                Debug.Log("Could not retrieve active pet");
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+                callback(snapshot.Value.ToString()); 
+            }
+        });
+    }
+
+    public static void GetPetCares(Action<DataSnapshot> callback, string playerID, string petName)
+    {
+        _database.GetReference(playerID).Child("currentPets").Child(petName).Child("habits").Child("actions").GetValueAsync().ContinueWith(task => {
+            if (task.IsFaulted)
+            {
+                Debug.Log("Could not retrieve active pet cares");
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+                foreach(DataSnapshot element in snapshot.Children)
+                {
+                    callback(element);
+                }
+            }
+        });
+    }
+
     // public static void AddActions
 
 
 
-//     public static string GetPetType(string playerID)
-//     {
-        
-//         string petUpdate = "Poopy";
-//         while(petUpdate == "Poopy") {
-//         _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
-//         {
-            
-//             if (task.IsCanceled)
-//             {
-//                 Debug.Log("Could Not Retrieve Active Pet");
-//                 return "";
-//             }
-//             if (task.IsFaulted)
-//             {
-//                 Debug.LogError("Could Not Retrieve Active Pet: " + task.Exception);
-//                 return "";
-//             }
+    //     public static string GetPetType(string playerID)
+    //     {
 
-//             DataSnapshot snapshot = task.Result;
-//             petUpdate = snapshot.Value.ToString();
-//             Debug.Log("snapshot" + petUpdate);
-//             string updatedPet = PetTypeValue(playerID, petUpdate); // this doesn't work
-//             Debug.Log(playerID);
-//             Debug.Log("COME ONE" + petUpdate);
-//             // return updatedPet;
-            
-//             return petUpdate;
-            
-//         });
-//         return petUpdate;
-//         }
-//         return petUpdate;
-//     }
-    
-// // // original
-// //     private static string PetTypeValue(string playerID, string petName)
-// //     {
+    //         string petUpdate = "Poopy";
+    //         while(petUpdate == "Poopy") {
+    //         _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
+    //         {
 
-// //         string petUpdate = "";
+    //             if (task.IsCanceled)
+    //             {
+    //                 Debug.Log("Could Not Retrieve Active Pet");
+    //                 return "";
+    //             }
+    //             if (task.IsFaulted)
+    //             {
+    //                 Debug.LogError("Could Not Retrieve Active Pet: " + task.Exception);
+    //                 return "";
+    //             }
 
-// //         _database.GetReference(playerID).Child(petName).Child("petType").GetValueAsync().ContinueWithOnMainThread(task =>
-// //         {
-// //             if (task.IsCanceled)
-// //             {
-// //                 Debug.Log("Could Not Retrieve Active Pet Type");
-// //                 return "";
-// //             }
-// //             if (task.IsFaulted)
-// //             {
-// //                 Debug.LogError("Could Not Retrieve Active Pet Type: " + task.Exception);
-// //                 return "";
-// //             }
-            
-// //             DataSnapshot snapshot = task.Result;
-// //             Debug.Log("petupdate in pettylevalue" + snapshot);
-// //             petUpdate = snapshot.Value.ToString();
-// //             Debug.Log("petupdate in pettylevalue" + petUpdate);
-// //             return petUpdate;
+    //             DataSnapshot snapshot = task.Result;
+    //             petUpdate = snapshot.Value.ToString();
+    //             Debug.Log("snapshot" + petUpdate);
+    //             string updatedPet = PetTypeValue(playerID, petUpdate); // this doesn't work
+    //             Debug.Log(playerID);
+    //             Debug.Log("COME ONE" + petUpdate);
+    //             // return updatedPet;
 
+    //             return petUpdate;
 
-// //         });
-// //         return "";
-// //     }
+    //         });
+    //         return petUpdate;
+    //         }
+    //         return petUpdate;
+    //     }
+
+    // // // original
+    // //     private static string PetTypeValue(string playerID, string petName)
+    // //     {
+
+    // //         string petUpdate = "";
+
+    // //         _database.GetReference(playerID).Child(petName).Child("petType").GetValueAsync().ContinueWithOnMainThread(task =>
+    // //         {
+    // //             if (task.IsCanceled)
+    // //             {
+    // //                 Debug.Log("Could Not Retrieve Active Pet Type");
+    // //                 return "";
+    // //             }
+    // //             if (task.IsFaulted)
+    // //             {
+    // //                 Debug.LogError("Could Not Retrieve Active Pet Type: " + task.Exception);
+    // //                 return "";
+    // //             }
+
+    // //             DataSnapshot snapshot = task.Result;
+    // //             Debug.Log("petupdate in pettylevalue" + snapshot);
+    // //             petUpdate = snapshot.Value.ToString();
+    // //             Debug.Log("petupdate in pettylevalue" + petUpdate);
+    // //             return petUpdate;
 
 
-
-//   private static string PetTypeValue(string playerID, string petName)
-//     {
-
-//         string petUpdate = "";
-
-//         _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
-//         {
-//             if (task.IsCanceled)
-//             {
-//                 Debug.Log("Could Not Retrieve Active Pet Type");
-//                 return "";
-//             }
-//             if (task.IsFaulted)
-//             {
-//                 Debug.LogError("Could Not Retrieve Active Pet Type: " + task.Exception);
-//                 return "";
-//             }
-            
-//             DataSnapshot snapshot = task.Result;
-//             // Debug.Log("petupdate in pettylevalue" + snapshot);
-//             petUpdate = snapshot.Value.ToString();
-//             // Debug.Log("petupdate in pettylevalue " + petUpdate);
-//             return petUpdate;
+    // //         });
+    // //         return "";
+    // //     }
 
 
-//         });
-//         return petUpdate;
-//     }
+
+    //   private static string PetTypeValue(string playerID, string petName)
+    //     {
+
+    //         string petUpdate = "";
+
+    //         _database.GetReference(playerID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
+    //         {
+    //             if (task.IsCanceled)
+    //             {
+    //                 Debug.Log("Could Not Retrieve Active Pet Type");
+    //                 return "";
+    //             }
+    //             if (task.IsFaulted)
+    //             {
+    //                 Debug.LogError("Could Not Retrieve Active Pet Type: " + task.Exception);
+    //                 return "";
+    //             }
+
+    //             DataSnapshot snapshot = task.Result;
+    //             // Debug.Log("petupdate in pettylevalue" + snapshot);
+    //             petUpdate = snapshot.Value.ToString();
+    //             // Debug.Log("petupdate in pettylevalue " + petUpdate);
+    //             return petUpdate;
+
+
+    //         });
+    //         return petUpdate;
+    //     }
 
 
 
@@ -179,9 +282,45 @@ public class FireSaver : MonoBehaviour
 
     // }
 
-    public async Task<bool> SaveExists()
-    {
-        var dataSnapshot = await _database.GetReference(PLAYER_KEY).GetValueAsync();
-        return dataSnapshot.Exists;
-    }
+    //    public static int getPetHealth(Action callback)
+    //    {
+    //        string userID = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
+    //        string petName;
+
+    //        _database.GetReference(userID).Child("activePet").GetValueAsync().ContinueWithOnMainThread(task =>
+    //        {
+
+    //                DataSnapshot snapshot = task.Result;
+    //                petName = snapshot.Value.ToString();
+
+    //                getPetHealthByName(petName, callback);
+
+    //        });
+
+    //    }
+
+    //    public static void getPetHealthByName(string petName, Action callback)
+    //    {
+    //        string userID = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
+    //        int petHealth;
+
+    //        _database.GetReference(userID).Child("currentPets").Child(petName).Child("health").GetValueAsync().ContinueWithOnMainThread(task =>
+    //        {
+
+    //            if (task.IsFaulted)
+    //            {
+    //                Debug.Log("Could Not Retrieve Pet Health");
+    //            }
+    //            else 
+    //            {
+
+    //                DataSnapshot snapshot = task.Result;
+    //                petHealth = int.Parse(snapshot.Value.ToString());
+    //                Debug.Log(petHealth);
+    //                callback(petHealth);
+    //            }
+    //        });
+    //    }
+
+
 }

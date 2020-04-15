@@ -201,8 +201,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1518346332}
   m_HandleRect: {fileID: 1518346331}
   m_Direction: 0
-  m_Value: 0.0000000801828
-  m_Size: 0.5168517
+  m_Value: 0
+  m_Size: 0.5168518
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2969,6 +2969,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248843796}
   m_CullTransparentMesh: 0
+--- !u!1 &310913883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 310913885}
+  - component: {fileID: 310913884}
+  m_Layer: 0
+  m_Name: HealthSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &310913884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310913883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9adf7fa8f6ca8894b93af986091ad9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderBlackCat: {fileID: 1081444100}
+  sliderCat: {fileID: 560489877}
+  FillBlackCat: {fileID: 400150767}
+  FillCat: {fileID: 142517257}
+  healthcolor: {r: 0, g: 0, b: 0, a: 0}
+  MaxHealthColor: {r: 0, g: 1, b: 0, a: 1}
+  MinHealthColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!4 &310913885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310913883}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 280.39404, y: 281.2547, z: -30337.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &320672661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3848,6 +3898,7 @@ GameObject:
   - component: {fileID: 400150766}
   - component: {fileID: 400150768}
   - component: {fileID: 400150767}
+  - component: {fileID: 400150769}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -3910,6 +3961,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400150765}
   m_CullTransparentMesh: 0
+--- !u!114 &400150769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400150765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9adf7fa8f6ca8894b93af986091ad9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderBlackCat: {fileID: 0}
+  sliderCat: {fileID: 0}
+  FillBlackCat: {fileID: 0}
+  FillCat: {fileID: 0}
+  healthcolor: {r: 0, g: 0, b: 0, a: 0}
+  MaxHealthColor: {r: 0, g: 1, b: 0, a: 1}
+  MinHealthColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &411041509
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,6 +4287,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 426415800}
         m_MethodName: close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 310913884}
+        m_MethodName: raiseHealth
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5487,6 +5568,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 310913884}
+        m_MethodName: raiseHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &528322721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5664,6 +5756,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 538144357}
         m_MethodName: close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 310913884}
+        m_MethodName: raiseHealth
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5921,6 +6024,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 667267181}
         m_MethodName: close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 310913884}
+        m_MethodName: raiseHealth
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7991,14 +8105,14 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 857638732}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
+  m_MaxValue: 100
+  m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
