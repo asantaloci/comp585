@@ -17,6 +17,7 @@ public class HealthBar : MonoBehaviour
 
     private bool neglectMeasured;
     private int neglectpacer = 0;
+    private int updatepacer = 9995;
 
     private List<DataSnapshot> chosenCares = new List<DataSnapshot>();
 
@@ -68,7 +69,16 @@ public class HealthBar : MonoBehaviour
                 {
                     if (petType == "blackCat" && valBlackCat != -1)
                     {
-                        UpdateHealthBar();
+                        if (updatepacer > 1000)
+                        {
+                            UpdateHealthBar();
+                            updatepacer = 0;
+                        }
+                        else
+                        {
+                            updatepacer++;
+                        }
+
                     }
                     else if (petType == "blackCat" && valBlackCat == -1)
                     {
@@ -76,7 +86,15 @@ public class HealthBar : MonoBehaviour
                     }
                     if (petType == "Cat" && valCat != -1)
                     {
-                        UpdateHealthBar();
+                        if (updatepacer > 1000)
+                        {
+                            UpdateHealthBar();
+                            updatepacer = 0;
+                        }
+                        else
+                        {
+                            updatepacer++;
+                        }
                     }
                     else if (petType == "Cat" && valBlackCat == -1)
                     {

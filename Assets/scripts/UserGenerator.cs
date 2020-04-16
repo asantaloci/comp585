@@ -120,7 +120,7 @@ public class UserGenerator
                 {"healvalue", 1},
                 {"hurtvalue", 1},
                 {"lastcared", timeStamp},
-                {"timeframe", 6}
+                {"timeframe", 1}
             };
 
             acts[petActs[i]] = temp;
