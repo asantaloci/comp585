@@ -76,4 +76,8 @@ public class NewUserProcess : MonoBehaviour
 
     }
 
+    public void currencyPosting() {
+        FireSaver.getCurrency(userID);
+    }
+
 }
