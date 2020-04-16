@@ -12,6 +12,7 @@ public class NewUserGenerator
     public string[] formerPets;
 
     public string activePet;
+    public int balance;
 
 
     public NewUserGenerator() {
@@ -19,6 +20,8 @@ public class NewUserGenerator
         this.name = "";
         this.wish = "";
         this.email = "";
+        this.balance = 200;
+
 
     }
 
@@ -32,6 +35,8 @@ public class NewUserGenerator
 
         this.currentPets = new string[0];
         this.formerPets = new string[0];
+
+        this.balance = 200;
 
     }
 

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Firebase.Database;
 using System.Threading.Tasks;
+using Firebase.Auth;
+using UnityEngine.UI;
 using static Firebase.Extensions.TaskExtension;
 
 public class FireSaver : MonoBehaviour
 {
+    // public Text currencyText;
     private const string PLAYER_KEY = "PLAYER_KEY";
     private static FirebaseDatabase _database;
 
@@ -61,6 +64,24 @@ public class FireSaver : MonoBehaviour
 
         //_database.ref("users").Child(playerName).SetRawJsonValueAsync(json);
         
+    }
+
+    public static void getCurrency(string playerID) {
+
+        _database.GetReference(playerID).Child("balance").GetValueAsync().ContinueWith(task => {
+            if (task.IsFaulted)
+            {
+                Debug.Log("Could Not Retrieve Active Pet");
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+                string currentBalance = snapshot.Value.ToString();
+                Text currencyText =  GameObject.Find("currency").GetComponent<Text>();
+                currencyText.text = "Current Balance: " + currentBalance + " coins";
+            }
+        });
+
     }
 
     // public static void AddActions
