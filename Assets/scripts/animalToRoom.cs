@@ -46,7 +46,7 @@ public class animalToRoom : MonoBehaviour
         else if (task.IsCompleted) {
           DataSnapshot snapshot = task.Result;
           string update = snapshot.Value.ToString();
-          Debug.Log("yay" + snapshot);
+        //   Debug.Log("yay" + snapshot);
           FirebaseDatabase.DefaultInstance.GetReference(userID).Child("activePet").ValueChanged += HandleValueChanged;
 
         }
@@ -58,9 +58,9 @@ public class animalToRoom : MonoBehaviour
         Debug.LogError(args.DatabaseError.Message);
         return;
       }
-      Debug.Log("non handlevaluechange error " + args.Snapshot.Value.ToString());
+    //   Debug.Log("non handlevaluechange error " + args.Snapshot.Value.ToString());
       chosenpet = args.Snapshot.Value.ToString();
-      Debug.Log(chosenpet);
+    //   Debug.Log(chosenpet);
        
     }
     
@@ -87,7 +87,7 @@ public class animalToRoom : MonoBehaviour
         if((chosenpet == "Cat" || chosenpet == "blackCat" || chosenpet == "Poopy" || chosenpet == "Poopy2")) {
         // GetUsers();
 //  Debug.Log("“animal in room function”");
- Debug.Log(chosenpet);
+//  Debug.Log(chosenpet);
  
         //  Debug.Log("please work" + GetPetType(userID));
         if (chosenpet == "Cat" || chosenpet == "Poopy") {
@@ -203,9 +203,45 @@ public class animalToRoom : MonoBehaviour
 
 
 
+public void resize (string objName, float height) {
+        GameObject obj = GameObject.Find(objName);
+        obj.GetComponent< RectTransform >( ).SetSizeWithCurrentAnchors( RectTransform.Axis.Vertical, height);
+    }
 
+public void scrollPopupSize() {
+        float scale = 68.76F;
+    
+        FirebaseDatabase.DefaultInstance.GetReference(userID).Child("currentPets").Child(chosenpet).Child("habits").Child("actions").GetValueAsync().ContinueWith(task => { 
+          
+            if (task.IsCanceled)
+            {
+                Debug.Log("Could Not Retrieve Active Pet");
+            } 
+            if (task.IsFaulted)
+            {
+                Debug.LogError("Could Not Retrieve Active Pet: " + task.Exception);
+            }
+            DataSnapshot snapshot = task.Result;
+            Dictionary<string, object> res = (Dictionary<string, object>)  snapshot.Value;
 
+            Dictionary<string, object> test = new Dictionary<string, object>();
 
+            int habitNumber = res.Count;
+
+            //int habitNumber = 100;
+
+            // resize("ScrollContent2", 100);
+
+            Debug.Log(habitNumber);
+            GameObject obj = GameObject.Find("roomcanvas/All items/Viewport/Content/room-blackCatButton/room-Popup/Scroll View/Viewport/ScrollContent");
+            // GameObject obj = GameObject.Find("ScrollContent");
+            obj.GetComponent< RectTransform >( ).SetSizeWithCurrentAnchors( RectTransform.Axis.Vertical, 68.3F);
+
+            Debug.Log("ree");
+            
+        });
+
+    } 
 
     
 // // original

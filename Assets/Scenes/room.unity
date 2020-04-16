@@ -201,8 +201,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1518346332}
   m_HandleRect: {fileID: 1518346331}
   m_Direction: 0
-  m_Value: 0.0000000801828
-  m_Size: 0.5168517
+  m_Value: 0
+  m_Size: 0.5168518
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7558,7 +7558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1024169027}
   m_Layer: 5
-  m_Name: Content
+  m_Name: ScrollContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8436,8 +8436,8 @@ RectTransform:
   m_Father: {fileID: 2016991707}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.43027908}
-  m_AnchorMax: {x: 1, y: 0.9999998}
+  m_AnchorMin: {x: 0, y: 0.43027925}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9447,7 +9447,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1142135228}
   m_HandleRect: {fileID: 1142135227}
   m_Direction: 2
-  m_Value: 0.9999996
+  m_Value: 1.0000004
   m_Size: 0.56972075
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -10390,6 +10390,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518346330}
   m_CullTransparentMesh: 0
+--- !u!1 &1544548306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1544548307}
+  - component: {fileID: 1544548309}
+  - component: {fileID: 1544548308}
+  m_Layer: 5
+  m_Name: Background (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1544548307
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544548306}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1716870929}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0.2000122, y: 0.20004272}
+  m_SizeDelta: {x: 8.52002, y: 10.280029}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1544548308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544548306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9588754, g: 1, b: 0.4292453, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 444a8f51369274d8cb9ddca28538a256, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1544548309
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544548306}
+  m_CullTransparentMesh: 0
 --- !u!1 &1593669962
 GameObject:
   m_ObjectHideFlags: 0
@@ -10986,6 +11059,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1786921202}
+  - {fileID: 1544548307}
   m_Father: {fileID: 560489876}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12778,6 +12852,7 @@ GameObject:
   - component: {fileID: 2084197727}
   - component: {fileID: 2084197726}
   - component: {fileID: 2084197725}
+  - component: {fileID: 2084197730}
   m_Layer: 5
   m_Name: room-blackCatButton
   m_TagString: Untagged
@@ -12852,6 +12927,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2084197730}
+        m_MethodName: scrollPopupSize
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2084197727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12913,6 +12999,23 @@ RectTransform:
   m_AnchoredPosition: {x: -277.09995, y: -428.5053}
   m_SizeDelta: {x: 135.8, y: 158.88}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2084197730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084197724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0632477402a1742b29821b5df62114ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chosenpet: 
+  wee: 0
+  blackcat: {fileID: 2084197724}
+  cat: {fileID: 728057791}
+  userID: 
 --- !u!1 &2089256282
 GameObject:
   m_ObjectHideFlags: 0
@@ -12959,7 +13062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2111962734}
   m_Layer: 5
-  m_Name: Content
+  m_Name: ScrollContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
