@@ -87,7 +87,7 @@ public class animalToRoom : MonoBehaviour
         if((chosenpet == "Cat" || chosenpet == "blackCat" || chosenpet == "Poopy" || chosenpet == "Poopy2")) {
         // GetUsers();
 //  Debug.Log("“animal in room function”");
- Debug.Log(chosenpet);
+// Debug.Log(chosenpet);
  
         //  Debug.Log("please work" + GetPetType(userID));
         if (chosenpet == "Cat" || chosenpet == "Poopy") {

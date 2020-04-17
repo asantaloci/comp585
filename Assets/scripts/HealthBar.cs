@@ -17,11 +17,11 @@ public class HealthBar : MonoBehaviour
 
     private bool neglectMeasured;
     private int neglectpacer = 0;
-    private int updatepacer = 9995;
+    private int updatepacer = 995;
 
     private List<DataSnapshot> chosenCares = new List<DataSnapshot>();
 
-    private int careCounter = 0;
+    private int careCounter = 1;
 
     public Action<int> callback;
     public Action<string> petnamecallback;
@@ -54,6 +54,12 @@ public class HealthBar : MonoBehaviour
         damagecallback = HandleDamage;
         neglectMeasured = false;
         userID = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
+
+        FillBlackCat = GameObject.Find("BackgroundBCBar").GetComponent<Image>();
+        FillCat = GameObject.Find("BackgroundCBar").GetComponent<Image>();
+        sliderBlackCat = GameObject.Find("healthBarBC").GetComponent<Slider>();
+        sliderCat = GameObject.Find("healthBarC").GetComponent<Slider>();
+
     }
 
     private void Update()
@@ -67,16 +73,20 @@ public class HealthBar : MonoBehaviour
             {
                 if (petType != null)
                 {
+
                     if (petType == "blackCat" && valBlackCat != -1)
                     {
                         if (updatepacer > 1000)
                         {
                             UpdateHealthBar();
                             updatepacer = 0;
+
+                            Debug.Log(chosenCares);
                         }
                         else
                         {
                             updatepacer++;
+                            //Debug.Log(updatepacer);
                         }
 
                     }
@@ -103,18 +113,30 @@ public class HealthBar : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("Pet Type is Null");
                     RequestPetType();
                 }
             }
             else
             {
+                Debug.Log("current pet is Null");
                 RequestPetName();
             }
         }
 
         // This block calls the timing system
 
-        MeasureNeglectDamage();
+
+
+        if (neglectpacer > 1000)
+        {
+            neglectpacer = 0;
+            chosenCares.ForEach(MeasureTiming);
+        }
+        else
+        {
+            neglectpacer++;
+        }
 
     }
 
@@ -131,6 +153,7 @@ public class HealthBar : MonoBehaviour
 
         if (petType == "blackCat")
         {
+            
             FillBlackCat.color = Color.Lerp(MinHealthColor, MaxHealthColor, (float)valBlackCat / MaxHealth);
             sliderBlackCat.value = 100 - valBlackCat;
         }
@@ -148,7 +171,7 @@ public class HealthBar : MonoBehaviour
             else
             {
                 neglectMeasured = true;
-                MeasureTiming();
+     //           MeasureTiming();
             }
         }
 
@@ -157,7 +180,7 @@ public class HealthBar : MonoBehaviour
             neglectpacer += 1;
         }
 
-        if (neglectpacer == 10000)
+        if (neglectpacer > 1000)
         {
             neglectpacer = 0;
             neglectMeasured = false;
@@ -214,64 +237,66 @@ public class HealthBar : MonoBehaviour
 
     public void HandleDamage(bool variable)
     {
+        Debug.Log("Death Knell");
         UpdateHealthBar();
-        careCounter += 1;
+  /*      careCounter += 1;
         if (careCounter <= chosenCares.Count)
         {
             MeasureTiming();
         }
-    }
-
-    public void MeasureTiming() 
-    {
-        DateTime time = DateTime.Parse(chosenCares[careCounter].Child("lastcared").Value.ToString());
-
-        TimeSpan diff = time.Subtract(DateTime.Now);
-
-        int timeframe = int.Parse(chosenCares[careCounter].Child("timeframe").Value.ToString());
-
-        if (timeframe == 1)
-        {
-            if (diff.Seconds < (-3600 * 24))
-            {
-                TakeNeglectDamage(chosenCares[careCounter]);
-                FireSaver.SetLastCare(userID, currentPet, chosenCares[careCounter]);
-            }
-
-        }
-        else if (timeframe == 2)
-        {
-            if (diff.Seconds < (-3600 * 12))
-            {
-                TakeNeglectDamage(chosenCares[careCounter]); 
-            }
-        }
-        else if (timeframe == 3)
-        {
-            if (diff.Seconds < (-3600 * 6))
-            {
-                TakeNeglectDamage(chosenCares[careCounter]);
-            }
-        }
         else
         {
-            if (diff.Seconds < (-3600 / 22)) // Test Timeframe
+            careCounter = 1;
+        }*/
+    }
+
+    public void MeasureTiming(DataSnapshot care) 
+    {
+
+            DateTime time = DateTime.Parse(care.Child("lastcared").Value.ToString());
+
+            TimeSpan diff = time.Subtract(DateTime.Now);
+
+            int timeframe = int.Parse(care.Child("timeframe").Value.ToString());
+
+            if (timeframe == 1)
             {
-                TakeNeglectDamage(chosenCares[careCounter]); 
+                if (diff.Seconds < (-3600 * 24))
+                {
+                    TakeNeglectDamage(care);
+                    FireSaver.SetLastCare(userID, currentPet, care);
+                }
+
             }
-        }
+            else if (timeframe == 2)
+            {
+                if (diff.Seconds < (-3600 * 12))
+                {
+                    TakeNeglectDamage(chosenCares[careCounter]);
+                }
+            }
+            else if (timeframe == 3)
+            {
+                if (diff.Seconds < (-3600 * 6))
+                {
+                    TakeNeglectDamage(chosenCares[careCounter]);
+                }
+            }
+            else
+            {
+                if (diff.Seconds < (-3600 / 36)) // Test Timeframe
+                {
+                    TakeNeglectDamage(care);
+                    FireSaver.SetLastCare(userID, currentPet, care);
+                }
+            }
+        
     }
 
     public void TakeNeglectDamage(DataSnapshot care) 
     { 
-        if (petType == "Cat")
-        {
-            FireSaver.HurtPet(userID, currentPet, care, damagecallback);
 
-        }
-        if (petType == "blackCat")
-        {
             FireSaver.HurtPet(userID, currentPet, care, damagecallback);
-        }
+        
     }
 }
