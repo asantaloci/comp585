@@ -18,6 +18,7 @@ public class animalToRoom : MonoBehaviour
         
         public GameObject blackcat;
         public GameObject cat;
+        public GameObject shiba;
         public string userID;
               private static FirebaseDatabase _database;
 
@@ -84,7 +85,7 @@ public class animalToRoom : MonoBehaviour
     void Update() {
          
         // Debug.Log(chosenpet);
-        if((chosenpet == "Cat" || chosenpet == "blackCat" || chosenpet == "Poopy" || chosenpet == "Poopy2")) {
+        if((chosenpet == "Cat" || chosenpet == "blackCat"  || chosenpet == "shiba"  || chosenpet == "Poopy" || chosenpet == "Poopy2")) {
         // GetUsers();
 //  Debug.Log("“animal in room function”");
  Debug.Log(chosenpet);
@@ -95,15 +96,31 @@ public class animalToRoom : MonoBehaviour
             blackcat.SetActive(false);
             cat.SetActive(true);
             wee = true;
+        } 
+        else if (chosenpet == "blackCat" || chosenpet == "Poopy2") {
+// Debug.Log("“orangecat”");
+            blackcat.SetActive(true);
+            cat.SetActive(false);
+            shiba.SetActive(false);
+            wee = true;
+        } else 
+//shiba
+             if (chosenpet == "shiba") {
+Debug.Log("shiba");
+
+            blackcat.SetActive(false);
+            cat.SetActive(false);
+            shiba.SetActive(true);
+            wee = true;
         } else {
+         Debug.Log("“shiba”");
+
         //  Debug.Log("“black cat”");
          cat.SetActive(false);
-         blackcat.SetActive(true);
+         blackcat.SetActive(false);
+         shiba.SetActive(false);
          wee = true;
-     }
-    } else {
-        // Debug.Log("shit!");
-        // wee = true;
+     } 
     }
     }
 //  public void GetUsers(){
