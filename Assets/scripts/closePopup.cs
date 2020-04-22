@@ -83,6 +83,21 @@ public class closePopup : MonoBehaviour
 
             //  Debug.Log("animaltype of chosen = " + chosenpet.animalType);
         }
+          else
+          if (selected.animalType == "shiba")
+        { // if the animal that was selected's type is cat
+          //   Debug.Log(selected.animalType);
+            chosenpet.animalType = selected.animalType;   //set the chosen pet object to that 
+                                                          //  Debug.Log(chosenpet.animalType);
+            chosenpet.health = 100;
+            selectedAnimalType = "shiba";
+            chosenpet.animalName = selected.animalName;
+            output.text = "You chose: " + chosenpet.animalType;
+            string json = JsonUtility.ToJson(chosenpet);
+            FireSaver.AddPet(userID, chosenpet.animalName, json);
+
+            //  Debug.Log("animaltype of chosen = " + chosenpet.animalType);
+        }
 
         // Text txt = transform.Find("Text").GetComponent<Text>();
         // if (selectedtext.enabled) {
