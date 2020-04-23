@@ -88,7 +88,7 @@ public class animalToRoom : MonoBehaviour
         if((chosenpet == "Cat" || chosenpet == "blackCat"  || chosenpet == "shiba"  || chosenpet == "Poopy" || chosenpet == "Poopy2")) {
         // GetUsers();
 //  Debug.Log("“animal in room function”");
- Debug.Log(chosenpet);
+//  Debug.Log(chosenpet);
  
         //  Debug.Log("please work" + GetPetType(userID));
         if (chosenpet == "Cat" || chosenpet == "Poopy") {
@@ -106,14 +106,14 @@ public class animalToRoom : MonoBehaviour
         } else 
 //shiba
              if (chosenpet == "shiba") {
-Debug.Log("shiba");
+// Debug.Log("shiba");
 
             blackcat.SetActive(false);
             cat.SetActive(false);
             shiba.SetActive(true);
             wee = true;
         } else {
-         Debug.Log("“shiba”");
+        //  Debug.Log("“shiba”");
 
         //  Debug.Log("“black cat”");
          cat.SetActive(false);
