@@ -106,7 +106,7 @@ public class UserGenerator
 
     public Dictionary<string, object> getDictionary(){
         
-        string[] petActs = new string[] { "water", "feed", "walk", "pet", "groom", "bath", "six", "seven", "eight", "nine", "ten", "eleven", "thirteen", "fourteen", "fifteen", "sixteen" };
+        string[] petActs = new string[] { "water", "feed", "walk", "pet", "groom", "bath", "six", "seven" };
         
         DateTime now = DateTime.Now;
         string timeStamp = now.ToString();
