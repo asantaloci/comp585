@@ -236,7 +236,7 @@ public class HealthBar : MonoBehaviour
             }
             else
             {
-                if (diff.Seconds < (-3600 / 36)) // Test Timeframe
+                if (diff.TotalSeconds < (-3600 / 36)) // Test Timeframe
                 {
                     neglectdamage += int.Parse(care.Child("hurtvalue").Value.ToString());
                     FireSaver.SetLastCare(userID, currentPet, care);
