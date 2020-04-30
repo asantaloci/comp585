@@ -202,7 +202,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1518346331}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.51685184
+  m_Size: 0.5168518
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2617,6 +2617,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1876321881}
+        m_MethodName: CareForPet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &195250528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2797,6 +2808,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 197800285}
         m_MethodName: close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1876321881}
+        m_MethodName: CareForPet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5890,6 +5912,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1876321881}
+        m_MethodName: CareForPet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &426415802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7638,7 +7671,7 @@ GameObject:
   - component: {fileID: 521680522}
   - component: {fileID: 521680521}
   m_Layer: 5
-  m_Name: Background
+  m_Name: BackgroundS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7998,6 +8031,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1876321881}
+        m_MethodName: CareForPet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &528322721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8175,6 +8219,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 538144357}
         m_MethodName: close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1876321881}
+        m_MethodName: CareForPet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9253,6 +9308,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 667267181}
         m_MethodName: close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1876321881}
+        m_MethodName: CareForPet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11068,8 +11134,8 @@ GameObject:
   - component: {fileID: 858233728}
   - component: {fileID: 858233729}
   m_Layer: 5
-  m_Name: healthBar
-  m_TagString: Untagged
+  m_Name: healthBarbc
+  m_TagString: blackcathealthbar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11133,13 +11199,13 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 568999402}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -11156,7 +11222,7 @@ GameObject:
   - component: {fileID: 863781604}
   - component: {fileID: 863781605}
   m_Layer: 5
-  m_Name: healthBar
+  m_Name: healthBarS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11768,6 +11834,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 913457181}
         m_MethodName: close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1876321881}
+        m_MethodName: CareForPet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13017,6 +13094,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1876321881}
+        m_MethodName: CareForPet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1086424656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13157,6 +13245,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1087819677}
         m_MethodName: close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1876321881}
+        m_MethodName: CareForPet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13382,6 +13481,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1122064962}
         m_MethodName: close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1876321881}
+        m_MethodName: CareForPet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18169,7 +18279,7 @@ GameObject:
   - component: {fileID: 1745589260}
   - component: {fileID: 1745589259}
   m_Layer: 5
-  m_Name: Background
+  m_Name: BackgroundBC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19197,6 +19307,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1876321881}
+        m_MethodName: CareForPet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1846144042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19264,6 +19385,7 @@ GameObject:
   - component: {fileID: 1876321880}
   - component: {fileID: 1876321879}
   - component: {fileID: 1876321878}
+  - component: {fileID: 1876321881}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -19319,6 +19441,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1876321881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876321877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6423c32393ff21e45930f8da35a0d292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderBlackCat: {fileID: 858233729}
+  sliderCat: {fileID: 560489877}
+  sliderShiba: {fileID: 863781605}
+  FillBlackCat: {fileID: 1745589259}
+  FillCat: {fileID: 142517257}
+  FillShiba: {fileID: 521680521}
+  healthcolor: {r: 0, g: 0, b: 0, a: 0}
+  MaxHealthColor: {r: 0, g: 1, b: 0, a: 1}
+  MinHealthColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1907962586
 GameObject:
   m_ObjectHideFlags: 0
@@ -19385,6 +19528,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1907962591}
         m_MethodName: close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1876321881}
+        m_MethodName: CareForPet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
